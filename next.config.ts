@@ -1,16 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export',
   images: {
-    localPatterns: [
-      {
-        pathname: '/pictures/**',
-        search: '',
-      },
-    ],
-    // Allow .jfif files by passing through without optimization issues
-    dangerouslyAllowSVG: false,
-    unoptimized: false,
+    unoptimized: true,
   },
 };
 
