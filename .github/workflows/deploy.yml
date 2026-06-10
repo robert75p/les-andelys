@@ -57,6 +57,6 @@ jobs:
                    set net:max-retries 3; \
                    set net:reconnect-interval-base 5; \
                    set ftp:use-feat no; \
-                   mirror --reverse --parallel=4 --verbose out/ public_html/; \
+                   mirror --reverse --parallel=4 --verbose out/ .; \
                    bye" \
                "$FTP_SERVER"
