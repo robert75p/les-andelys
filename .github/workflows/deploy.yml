@@ -25,6 +25,9 @@ jobs:
       - name: Build static export
         run: npm run build
 
+      - name: List build output
+        run: ls -la out/ && echo "---" && ls -la out/_next/ || echo "out/ folder not found"
+
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -32,5 +35,6 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
-          server-dir: ./public_html/
+          server-dir: public_html/
           dangerous-clean-slate: false
+          log-level: verbose
