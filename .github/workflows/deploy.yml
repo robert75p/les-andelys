@@ -36,12 +36,12 @@ jobs:
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         run: |
           lftp -u "$FTP_USERNAME","$FTP_PASSWORD" \
-               -e "set ftp:ssl-force true; \
-                   set ftp:ssl-protect-data true; \
-                   set ssl:verify-certificate no; \
+               -e "set ssl:verify-certificate no; \
                    set ftp:passive-mode true; \
                    set net:timeout 30; \
                    set net:max-retries 3; \
+                   set net:reconnect-interval-base 5; \
+                   set ftp:use-feat no; \
                    mirror --reverse --parallel=4 --verbose out/ .; \
                    bye" \
                "$FTP_SERVER"
