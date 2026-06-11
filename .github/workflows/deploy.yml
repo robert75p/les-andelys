@@ -35,13 +35,13 @@ jobs:
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         run: |
-          lftp -u "$FTP_USERNAME","$FTP_PASSWORD" \
+          lftp -d -u "$FTP_USERNAME","$FTP_PASSWORD" \
                -e "set ssl:verify-certificate no; \
                    set ftp:passive-mode true; \
                    set net:timeout 30; \
                    set ftp:use-feat no; \
-                   pwd; ls; bye" \
-               "$FTP_SERVER"
+                   pwd; bye" \
+               "$FTP_SERVER" 2>&1 | head -60 || true
 
       - name: Deploy to Hostinger via FTP
         timeout-minutes: 15
