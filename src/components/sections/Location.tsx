@@ -30,6 +30,9 @@ const tabImages: Record<TabKey, { src: string; caption: string }[]> = {
   ],
   culture: [
     { src: '/pictures/Les-Andelys/chateau.jpg', caption: 'Château Gaillard — Richard Cœur de Lion' },
+    { src: '/pictures/Aa/chateau.jfif', caption: 'Forteresse médiévale du XIIe siècle' },
+    { src: '/pictures/Aa/chateau-2.jfif', caption: 'Les remparts sur la Seine' },
+    { src: '/pictures/Aa/chateau-3.jfif', caption: 'Vestiges du donjon royal' },
     { src: '/pictures/Les-Andelys/musee.webp', caption: 'Musée Nicolas Poussin' },
     { src: '/pictures/Les-Andelys/musee2.webp', caption: 'Patrimoine normand' },
     { src: '/pictures/Les-Andelys/musee3.jpg', caption: 'Collections permanentes' },
