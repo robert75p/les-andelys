@@ -11,7 +11,7 @@ export const locales: { code: Locale; label: string; flag: string }[] = [
 export const translations = {
   fr: {
     nav: {
-      property: 'Propriété',
+      property: 'Les Andelys',
       location: 'Localisation',
       gallery: 'Galerie',
       contact: 'Contact',
@@ -33,8 +33,8 @@ export const translations = {
         "Velux en toiture pour une lumière naturelle abondante",
         "Cuisine ouverte avec détails en pierre d'origine",
         '2/3 chambres spacieuses avec rangements intégrés',
-        'Jardin paysager et cour privée',
-        'Parquet chauffant, double vitrage, fibre optique',
+        'Parking sécurisé et cour privée',
+        'Parquet, double vitrage, fibre optique',
       ],
       stats: {
         size: '93 m²',
@@ -144,12 +144,12 @@ export const translations = {
       tagline: "L'art de l'immobilier en Normandie",
       legal: 'Mentions légales',
       privacy: 'Politique de confidentialité',
-      copyright: '© 2024 Les Andelys Immobilier',
+      copyright: '© 2024 Adresse Privée Immobilier',
     },
   },
   en: {
     nav: {
-      property: 'Property',
+      property: 'Les Andelys',
       location: 'Location',
       gallery: 'Gallery',
       contact: 'Contact',
@@ -171,8 +171,8 @@ export const translations = {
         'Roof skylights flooding every room with natural light',
         'Open-plan kitchen with original stone details',
         '2/3 spacious bedrooms with built-in storage',
-        'Landscaped garden and private courtyard',
-        'Heated parquet flooring, double glazing, fiber internet',
+        'Gated Parking and private courtyard',
+        'Parquet flooring, double glazing, fiber internet',
       ],
       stats: {
         size: '93 m²',
@@ -282,12 +282,12 @@ export const translations = {
       tagline: 'The art of real estate in Normandy',
       legal: 'Legal Notice',
       privacy: 'Privacy Policy',
-      copyright: '© 2024 Les Andelys Immobilier',
+      copyright: '© 2024 Adresse Privée Immobilier',
     },
   },
   de: {
     nav: {
-      property: 'Immobilie',
+      property: 'Les Andelys',
       location: 'Lage',
       gallery: 'Galerie',
       contact: 'Kontakt',
@@ -309,8 +309,8 @@ export const translations = {
         'Dachfenster für reichlich natürliches Licht',
         'Offene Küche mit originalen Steindetails',
         '2/3 geräumige Schlafzimmer mit Einbauschränken',
-        'Angelegter Garten und privater Innenhof',
-        'Fußbodenheizung, Doppelverglasung, Glasfaserinternet',
+        'Parkplatz mit Schranke und privater Innenhof',
+        'Parkett, Doppelverglasung, Glasfaserinternet',
       ],
       stats: {
         size: '93 m²',
@@ -420,12 +420,12 @@ export const translations = {
       tagline: 'Die Kunst der Immobilien in der Normandie',
       legal: 'Impressum',
       privacy: 'Datenschutzerklärung',
-      copyright: '© 2024 Les Andelys Immobilier',
+      copyright: '© 2024 Adresse Privée Immobilier',
     },
   },
   it: {
     nav: {
-      property: 'Proprietà',
+      property: 'Les Andelys',
       location: 'Posizione',
       gallery: 'Galleria',
       contact: 'Contatto',
@@ -447,8 +447,8 @@ export const translations = {
         'Lucernari a tetto per abbondante luce naturale',
         'Cucina aperta con dettagli in pietra originale',
         '2/3 ampie camere da letto con armadi integrati',
-        'Giardino paesaggistico e cortile privato',
-        'Riscaldamento a pavimento, doppi vetri, fibra ottica',
+        'Parcheggio recintato e cortile privato',
+        'Parquet, doppi vetri, fibra ottica',
       ],
       stats: {
         size: '93 m²',
@@ -558,12 +558,12 @@ export const translations = {
       tagline: "L'arte dell'immobiliare in Normandia",
       legal: 'Note legali',
       privacy: 'Informativa sulla privacy',
-      copyright: '© 2024 Les Andelys Immobilier',
+      copyright: '© 2024 Adresse Privée Immobilier',
     },
   },
   zh: {
     nav: {
-      property: '房产',
+      property: 'Les Andelys',
       location: '位置',
       gallery: '画廊',
       contact: '联系',
@@ -585,8 +585,8 @@ export const translations = {
         '屋顶天窗为每个房间带来充足自然采光',
         '开放式厨房，保留原始石材细节',
         '2/3间宽敞卧室，配备内置储物柜',
-        '景观花园和私人庭院',
-        '地暖、双层玻璃、光纤网络',
+        '门禁停车场和私人庭院',
+        '实木地板、双层玻璃、光纤网络',
       ],
       stats: {
         size: '93 m²',
@@ -696,7 +696,7 @@ export const translations = {
       tagline: '诺曼底房地产的艺术',
       legal: '法律声明',
       privacy: '隐私政策',
-      copyright: '© 2024 Les Andelys Immobilier',
+      copyright: '© 2024 Adresse Privée Immobilier',
     },
   },
 } as const
