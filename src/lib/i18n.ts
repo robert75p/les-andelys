@@ -20,7 +20,7 @@ export const translations = {
     hero: {
       region: 'NORMANDIE · FRANCE',
       title: 'Le Loft des Andelys',
-      subtitle: '130 m² · 2/3 chambres · Plafonds voûtés · €425 000',
+      subtitle: '147 m² · 2/3 chambres · Plafonds voûtés · €425 000',
       scroll: 'Découvrir',
     },
     overview: {
@@ -37,7 +37,7 @@ export const translations = {
         'Parquet, lumineux et ouvert, fibre optique',
       ],
       stats: {
-        size: '130 m²',
+        size: '147 m²',
         sizeLabel: 'Surface',
         bedrooms: '2/3',
         bedroomsLabel: 'Chambres',
@@ -158,7 +158,7 @@ export const translations = {
     hero: {
       region: 'NORMANDY · FRANCE',
       title: 'Le Loft des Andelys',
-      subtitle: '130 m² · 2/3 bedrooms · Vaulted ceilings · €425,000',
+      subtitle: '147 m² · 2/3 bedrooms · Vaulted ceilings · €425,000',
       scroll: 'Discover',
     },
     overview: {
@@ -175,7 +175,7 @@ export const translations = {
         'Parquet flooring, bright open plan, fiber internet',
       ],
       stats: {
-        size: '130 m²',
+        size: '147 m²',
         sizeLabel: 'Floor Area',
         bedrooms: '2/3',
         bedroomsLabel: 'Bedrooms',
@@ -296,7 +296,7 @@ export const translations = {
     hero: {
       region: 'NORMANDIE · FRANKREICH',
       title: 'Le Loft des Andelys',
-      subtitle: '130 m² · 2/3 Schlafzimmer · Gewölbedecken · €425.000',
+      subtitle: '147 m² · 2/3 Schlafzimmer · Gewölbedecken · €425.000',
       scroll: 'Entdecken',
     },
     overview: {
@@ -313,7 +313,7 @@ export const translations = {
         'Parkett, lichtdurchflutet und offen, Glasfaserinternet',
       ],
       stats: {
-        size: '130 m²',
+        size: '147 m²',
         sizeLabel: 'Wohnfläche',
         bedrooms: '2/3',
         bedroomsLabel: 'Schlafzimmer',
@@ -434,7 +434,7 @@ export const translations = {
     hero: {
       region: 'NORMANDIA · FRANCIA',
       title: 'Le Loft des Andelys',
-      subtitle: '130 m² · 2/3 camere · Soffitti a volta · €425.000',
+      subtitle: '147 m² · 2/3 camere · Soffitti a volta · €425.000',
       scroll: 'Scopri',
     },
     overview: {
@@ -451,7 +451,7 @@ export const translations = {
         'Parquet, luminoso e open space, fibra ottica',
       ],
       stats: {
-        size: '130 m²',
+        size: '147 m²',
         sizeLabel: 'Superficie',
         bedrooms: '2/3',
         bedroomsLabel: 'Camere',
@@ -572,7 +572,7 @@ export const translations = {
     hero: {
       region: '诺曼底 · 法国',
       title: 'Le Loft des Andelys',
-      subtitle: '130 平方米 · 2/3 间卧室 · 拱形天花板 · €425,000',
+      subtitle: '147 平方米 · 2/3 间卧室 · 拱形天花板 · €425,000',
       scroll: '探索',
     },
     overview: {
@@ -589,7 +589,7 @@ export const translations = {
         '实木地板、明亮开放式格局、光纤网络',
       ],
       stats: {
-        size: '130 m²',
+        size: '147 m²',
         sizeLabel: '建筑面积',
         bedrooms: '2/3',
         bedroomsLabel: '卧室',
