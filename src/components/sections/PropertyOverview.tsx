@@ -39,7 +39,7 @@ export default function PropertyOverview() {
                 <p className="font-dm text-xs uppercase tracking-widest text-stone-400 mb-3">Le Loft</p>
                 <div className="flex flex-col gap-2">
                   <div className="flex justify-between items-baseline">
-                    <span className="font-cormorant text-2xl text-stone-900">76 m²</span>
+                    <span className="font-cormorant text-2xl text-stone-900">93 m²</span>
                   </div>
                   <div className="flex justify-between items-baseline border-t border-stone-100 pt-2">
                     <span className="font-dm text-sm text-stone-600">2/3 {s.bedroomsLabel.toLowerCase()}</span>
