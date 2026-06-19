@@ -8,7 +8,7 @@ import FadeInView from '@/components/ui/FadeInView'
 import SectionLabel from '@/components/ui/SectionLabel'
 import clsx from 'clsx'
 
-type TabKey = 'restaurants' | 'marche' | 'culture' | 'shopping'
+type TabKey = 'restaurants' | 'marche' | 'culture' | 'shopping' | 'quartier'
 
 const tabImages: Record<TabKey, { src: string; caption: string }[]> = {
   restaurants: [
@@ -45,6 +45,11 @@ const tabImages: Record<TabKey, { src: string; caption: string }[]> = {
     { src: '/pictures/Les-Andelys/boucher4.avif', caption: 'Boucherie artisanale' },
     { src: '/pictures/Les-Andelys/boucher3.webp', caption: 'Charcuterie du terroir' },
   ],
+  quartier: [
+    { src: '/pictures/Aa/riviere.jfif', caption: 'La Seine aux Andelys' },
+    { src: '/pictures/Aa/eglise.jpeg', caption: 'Collégiale Notre-Dame des Andelys' },
+    { src: '/pictures/Aa/mairie.jpeg', caption: 'Hôtel de Ville des Andelys' },
+  ],
 }
 
 export default function Location() {
@@ -54,7 +59,7 @@ export default function Location() {
   const { scrollYProgress } = useScroll({ target: bannerRef, offset: ['start end', 'end start'] })
   const y = useTransform(scrollYProgress, [0, 1], ['-15%', '15%'])
 
-  const tabKeys: TabKey[] = ['restaurants', 'marche', 'culture', 'shopping']
+  const tabKeys: TabKey[] = ['restaurants', 'marche', 'culture', 'shopping', 'quartier']
 
   return (
     <section id="location" className="bg-white">
