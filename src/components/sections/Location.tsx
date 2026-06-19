@@ -24,6 +24,8 @@ const tabImages: Record<TabKey, { src: string; caption: string }[]> = {
   ],
   marche: [
     { src: '/pictures/Les-Andelys/Marche.jpg', caption: 'Marché hebdomadaire' },
+    { src: '/pictures/Aa/marche-1.jpeg', caption: 'Place du marché en plein air' },
+    { src: '/pictures/Aa/marche-2.jpeg', caption: 'Étals de légumes frais' },
     { src: '/pictures/Les-Andelys/marche2.jpg', caption: 'Producteurs locaux' },
     { src: '/pictures/Les-Andelys/marche3.jpg', caption: 'Fromages normands' },
     { src: '/pictures/Les-Andelys/marche4.jpg', caption: 'Fleurs et légumes' },
