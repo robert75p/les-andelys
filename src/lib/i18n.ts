@@ -89,7 +89,7 @@ export const translations = {
     },
     contact: {
       label: 'Prendre Contact',
-      title: 'Parlons de votre projet',
+      title: 'Pour toute demande de contact, de visite ou d\'information complémentaire, vous pouvez nous laisser un message avec votre téléphone ou e-mail. Nous vous répondrons sous 24 heures.',
       fields: {
         name: 'Nom',
         email: 'Email',
@@ -100,9 +100,9 @@ export const translations = {
         submit: 'Envoyer ma demande',
       },
       agent: {
-        name: 'Isabelle Moreau',
-        title: 'Conseillère Immobilière',
-        phone: '+33 2 32 54 18 47',
+        name: 'Michel G. (le propriétaire)',
+        title: 'Propriétaire',
+        email: 'contact@adresse-privee.fr',
       },
     },
     footer: {
@@ -192,7 +192,7 @@ export const translations = {
     },
     contact: {
       label: 'Get in Touch',
-      title: 'Let\'s talk about your project',
+      title: 'For any enquiry, visit request or further information, please leave us a message with your phone number or email. We will get back to you within 24 hours.',
       fields: {
         name: 'Name',
         email: 'Email',
@@ -203,9 +203,9 @@ export const translations = {
         submit: 'Send my enquiry',
       },
       agent: {
-        name: 'Isabelle Moreau',
-        title: 'Real Estate Advisor',
-        phone: '+33 2 32 54 18 47',
+        name: 'Michel G. (the owner)',
+        title: 'Owner',
+        email: 'contact@adresse-privee.fr',
       },
     },
     footer: {
@@ -295,7 +295,7 @@ export const translations = {
     },
     contact: {
       label: 'Kontakt aufnehmen',
-      title: 'Sprechen wir über Ihr Projekt',
+      title: 'Für jede Anfrage, Besichtigungswunsch oder weitere Informationen können Sie uns eine Nachricht mit Ihrer Telefonnummer oder E-Mail hinterlassen. Wir melden uns innerhalb von 24 Stunden.',
       fields: {
         name: 'Name',
         email: 'E-Mail',
@@ -306,9 +306,9 @@ export const translations = {
         submit: 'Anfrage senden',
       },
       agent: {
-        name: 'Isabelle Moreau',
-        title: 'Immobilienberaterin',
-        phone: '+33 2 32 54 18 47',
+        name: 'Michel G. (der Eigentümer)',
+        title: 'Eigentümer',
+        email: 'contact@adresse-privee.fr',
       },
     },
     footer: {
@@ -398,7 +398,7 @@ export const translations = {
     },
     contact: {
       label: 'Contattaci',
-      title: 'Parliamo del tuo progetto',
+      title: 'Per qualsiasi richiesta di contatto, visita o informazioni aggiuntive, potete lasciarci un messaggio con il vostro telefono o email. Vi risponderemo entro 24 ore.',
       fields: {
         name: 'Nome',
         email: 'Email',
@@ -409,9 +409,9 @@ export const translations = {
         submit: 'Invia la mia richiesta',
       },
       agent: {
-        name: 'Isabelle Moreau',
-        title: 'Consulente Immobiliare',
-        phone: '+33 2 32 54 18 47',
+        name: 'Michel G. (il proprietario)',
+        title: 'Proprietario',
+        email: 'contact@adresse-privee.fr',
       },
     },
     footer: {
@@ -501,7 +501,7 @@ export const translations = {
     },
     contact: {
       label: '联系我们',
-      title: '让我们谈谈您的项目',
+      title: '如有任何联系、参观或进一步了解的需求，请留言并提供您的电话或电子邮件。我们将在24小时内回复您。',
       fields: {
         name: '姓名',
         email: '电子邮件',
@@ -512,9 +512,9 @@ export const translations = {
         submit: '发送咨询',
       },
       agent: {
-        name: 'Isabelle Moreau',
-        title: '房产顾问',
-        phone: '+33 2 32 54 18 47',
+        name: 'Michel G.（房产所有者）',
+        title: '所有者',
+        email: 'contact@adresse-privee.fr',
       },
     },
     footer: {

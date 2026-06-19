@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { Phone, Mail, User } from 'lucide-react'
+import { Mail, User } from 'lucide-react'
 import { useLanguage } from '@/lib/LanguageContext'
 import FadeInView from '@/components/ui/FadeInView'
 import SectionLabel from '@/components/ui/SectionLabel'
@@ -30,8 +30,8 @@ export default function Contact() {
           <FadeInView direction="left" className="relative hidden lg:block">
             <div className="relative w-full h-full min-h-[600px] rounded-sm overflow-hidden">
               <Image
-                src="/pictures/house/Loft-3.jfif"
-                alt="Loft des Andelys — espace lumineux"
+                src="/pictures/house/loft-entrance.jpeg"
+                alt="Loft des Andelys — entrée et salon"
                 fill
                 className="object-cover"
                 sizes="50vw"
@@ -42,9 +42,9 @@ export default function Contact() {
           {/* Right: form */}
           <FadeInView delay={0.1}>
             <SectionLabel>{t.contact.label}</SectionLabel>
-            <h2 className="font-cormorant italic text-[clamp(2rem,4vw,3.2rem)] text-stone-900 mb-8 leading-[1.1]">
+            <p className="font-dm text-stone-600 leading-relaxed text-sm md:text-base mb-8">
               {t.contact.title}
-            </h2>
+            </p>
 
             {sent ? (
               <div className="bg-[#8A9E7A]/20 border border-[#8A9E7A]/30 rounded-sm p-8 text-center">
@@ -129,11 +129,11 @@ export default function Contact() {
                 <p className="font-cormorant text-lg text-stone-900">{agent.name}</p>
                 <p className="font-dm text-xs text-stone-400 mb-1">{agent.title}</p>
                 <a
-                  href={`tel:${agent.phone}`}
+                  href={`mailto:${agent.email}`}
                   className="flex items-center gap-1.5 font-dm text-sm text-[#C4A882] hover:underline"
                 >
-                  <Phone className="w-3.5 h-3.5" />
-                  {agent.phone}
+                  <Mail className="w-3.5 h-3.5" />
+                  {agent.email}
                 </a>
               </div>
             </div>
