@@ -21,10 +21,10 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Le Loft des Andelys — Propriété d'Exception en Normandie",
   description:
-    "Loft de caractère à vendre à Les Andelys (27700), Normandie. 93 m², 2/3 chambres, poutres apparentes, plafonds voûtés. €485 000.",
+    "Loft de caractère à vendre à Les Andelys (27700), Normandie. 93 m², 2/3 chambres, poutres apparentes, plafonds voûtés. €425 000.",
   openGraph: {
     title: "Le Loft des Andelys",
-    description: "Loft exceptionnel en Normandie — 93 m² · €485 000",
+    description: "Loft exceptionnel en Normandie — 93 m² · €425 000",
     images: ["/pictures/house/Loft-1.png"],
   },
 };

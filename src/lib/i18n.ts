@@ -20,7 +20,7 @@ export const translations = {
     hero: {
       region: 'NORMANDIE · FRANCE',
       title: 'Le Loft des Andelys',
-      subtitle: '93 m² · 2/3 chambres · Plafonds voûtés · €485 000',
+      subtitle: '93 m² · 2/3 chambres · Plafonds voûtés · €425 000',
       scroll: 'Découvrir',
     },
     overview: {
@@ -41,10 +41,10 @@ export const translations = {
         sizeLabel: 'Surface',
         bedrooms: '2/3',
         bedroomsLabel: 'Chambres',
-        bathrooms: '2',
+        bathrooms: '1',
         bathroomsLabel: 'Salles de bain',
         terrace: '1',
-        terraceLabel: 'Terrasse',
+        terraceLabel: 'Allée & Parking',
       },
     },
     gallery: {
@@ -158,7 +158,7 @@ export const translations = {
     hero: {
       region: 'NORMANDY · FRANCE',
       title: 'Le Loft des Andelys',
-      subtitle: '93 m² · 2/3 bedrooms · Vaulted ceilings · €485,000',
+      subtitle: '93 m² · 2/3 bedrooms · Vaulted ceilings · €425,000',
       scroll: 'Discover',
     },
     overview: {
@@ -179,10 +179,10 @@ export const translations = {
         sizeLabel: 'Floor Area',
         bedrooms: '2/3',
         bedroomsLabel: 'Bedrooms',
-        bathrooms: '2',
+        bathrooms: '1',
         bathroomsLabel: 'Bathrooms',
         terrace: '1',
-        terraceLabel: 'Terrace',
+        terraceLabel: 'Driveway & Parking',
       },
     },
     gallery: {
@@ -296,7 +296,7 @@ export const translations = {
     hero: {
       region: 'NORMANDIE · FRANKREICH',
       title: 'Le Loft des Andelys',
-      subtitle: '93 m² · 2/3 Schlafzimmer · Gewölbedecken · €485.000',
+      subtitle: '93 m² · 2/3 Schlafzimmer · Gewölbedecken · €425.000',
       scroll: 'Entdecken',
     },
     overview: {
@@ -317,10 +317,10 @@ export const translations = {
         sizeLabel: 'Wohnfläche',
         bedrooms: '2/3',
         bedroomsLabel: 'Schlafzimmer',
-        bathrooms: '2',
+        bathrooms: '1',
         bathroomsLabel: 'Badezimmer',
         terrace: '1',
-        terraceLabel: 'Terrasse',
+        terraceLabel: 'Einfahrt & Parkplatz',
       },
     },
     gallery: {
@@ -434,7 +434,7 @@ export const translations = {
     hero: {
       region: 'NORMANDIA · FRANCIA',
       title: 'Le Loft des Andelys',
-      subtitle: '93 m² · 2/3 camere · Soffitti a volta · €485.000',
+      subtitle: '93 m² · 2/3 camere · Soffitti a volta · €425.000',
       scroll: 'Scopri',
     },
     overview: {
@@ -455,10 +455,10 @@ export const translations = {
         sizeLabel: 'Superficie',
         bedrooms: '2/3',
         bedroomsLabel: 'Camere',
-        bathrooms: '2',
+        bathrooms: '1',
         bathroomsLabel: 'Bagni',
         terrace: '1',
-        terraceLabel: 'Terrazza',
+        terraceLabel: 'Vialetto & Parcheggio',
       },
     },
     gallery: {
@@ -572,7 +572,7 @@ export const translations = {
     hero: {
       region: '诺曼底 · 法国',
       title: 'Le Loft des Andelys',
-      subtitle: '93 平方米 · 2/3 间卧室 · 拱形天花板 · €485,000',
+      subtitle: '93 平方米 · 2/3 间卧室 · 拱形天花板 · €425,000',
       scroll: '探索',
     },
     overview: {
@@ -593,10 +593,10 @@ export const translations = {
         sizeLabel: '建筑面积',
         bedrooms: '2/3',
         bedroomsLabel: '卧室',
-        bathrooms: '2',
+        bathrooms: '1',
         bathroomsLabel: '浴室',
         terrace: '1',
-        terraceLabel: '露台',
+        terraceLabel: '车道及停车位',
       },
     },
     gallery: {

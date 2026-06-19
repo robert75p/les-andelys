@@ -45,7 +45,7 @@ export default function PropertyOverview() {
                     <span className="font-dm text-sm text-stone-600">2/3 {s.bedroomsLabel.toLowerCase()}</span>
                   </div>
                   <div className="flex justify-between items-baseline border-t border-stone-100 pt-2">
-                    <span className="font-cormorant text-xl text-[#C4A882]">€485 000</span>
+                    <span className="font-cormorant text-xl text-[#C4A882]">€425 000</span>
                   </div>
                 </div>
               </div>
