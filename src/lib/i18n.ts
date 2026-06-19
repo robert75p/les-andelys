@@ -56,6 +56,41 @@ export const translations = {
       prev: 'Précédent',
       next: 'Suivant',
     },
+    layouts: {
+      label: 'Aménagement',
+      title: 'Projet de design pour les agencements du 1er étage qui optimisent la fonctionnalité et le style de votre loft',
+      ideas: [
+        {
+          badge: 'Idée d\'aménagement 1',
+          title: 'L\'Aménagement Deux Chambres Équilibré',
+          paragraphs: [
+            'Cette configuration cherche à maximiser l\'espace disponible pour créer deux chambres indépendantes et fonctionnelles, idéales pour des invités, la famille ou une colocation.',
+            'Le flux spatial : Nous utilisons le palier de l\'escalier central comme diviseur naturel. Une cloison en placoplatre court perpendiculairement à la longueur du loft, divisant l\'espace en chambre gauche et chambre droite. Des lits plateformes bas (avec tiroirs de rangement intégrés en dessous) sont placés directement sous la pente.',
+          ],
+        },
+        {
+          badge: 'Idée d\'aménagement 2',
+          title: 'Une Suite Principale + Une Chambre Compacte / Bureau',
+          paragraphs: [
+            'Cette configuration cherche à maximiser l\'espace disponible pour créer deux chambres indépendantes et fonctionnelles, idéales pour des invités, la famille ou une colocation.',
+            'Cet aménagement donne la priorité à une chambre principale haut de gamme tout en conservant un espace secondaire hautement fonctionnel et légèrement plus petit.',
+            'Le flux spatial : La suite principale occupe environ 60 % du plan, côté loft avec le renfoncement le plus profond et la meilleure luminosité. Les 40 % restants sont aménagés en chambre simple douillette, nurserie ou bureau haut de gamme.',
+            'La Suite Principale : Un lit king-size est positionné contre le mur pignon plat plutôt que sous la pente, offrant une hauteur sous plafond complète pour entrer et sortir du lit.',
+            'La Petite Chambre : Optimisée avec un lit de jour intégré niché sous le plafond incliné, tirant parti des découpes de plancher.',
+          ],
+        },
+        {
+          badge: 'Idée d\'aménagement 3',
+          title: 'La Suite Principale de Luxe avec Dressing',
+          paragraphs: [
+            'L\'expérience ultime « suite hôtelière ». Tout le 1er étage devient un sanctuaire privé et ouvert de luxe.',
+            'Le flux spatial : Pas de cloisons lourdes ici. L\'espace reste entièrement ouvert, avec des demi-cloisons ou d\'élégantes partitions en verre teinté pour définir les zones sans obstruer la lumière.',
+            'Le Dressing : Intégré dans les sections les plus basses sous les combles. Des armoires rétroéclairées sur mesure et des penderies adaptées à l\'angle du toit transforment un « espace mort » en un showroom haut de gamme.',
+            'La Salle de Bain Ouverte : Une baignoire îlot ou une douche à l\'italienne encadrée de verre est positionnée directement sous un Velux, pour contempler les étoiles en se détendant.',
+          ],
+        },
+      ],
+    },
     features: {
       label: 'Caractéristiques',
       title: 'Ce qui rend ce loft unique',
@@ -158,6 +193,41 @@ export const translations = {
       close: 'Close',
       prev: 'Previous',
       next: 'Next',
+    },
+    layouts: {
+      label: 'Floor Design',
+      title: 'Project design for the 1st floor layouts that optimize functionality and style for your loft',
+      ideas: [
+        {
+          badge: 'Layout Idea 1',
+          title: 'The Balanced Two-Bedroom Layout',
+          paragraphs: [
+            'This setup focuses on maximizing the footprint to create two independent, functional bedrooms, perfect for guests, family, or a roommate situation.',
+            'The Spatial Flow: We use the central staircase landing as the natural divider. A central drywall partition runs perpendicular to the length of the loft, splitting the space into a Left Bedroom and a Right Bedroom with low-profile platform beds (with built-in storage drawers beneath) are placed directly under the slope.',
+          ],
+        },
+        {
+          badge: 'Layout Idea 2',
+          title: 'One Master Suite + One Compact Bedroom/Office',
+          paragraphs: [
+            'This setup focuses on maximizing the footprint to create two independent, functional bedrooms, perfect for guests, family, or a roommate situation.',
+            'This layout prioritizes a premium principal room while retaining a highly functional, slightly smaller secondary space.',
+            'The Spatial Flow: The Master Suite takes up roughly 60% of the floor plan, utilizing the side of the loft with the deeper recess and best window clearance. The remaining 40% is carved out as a cozy single bedroom, nursery, or high-end home office.',
+            'The Master Setup: A king-sized bed is positioned against the flat gable wall rather than the slope, giving you full head height when getting in and out of bed.',
+            'The Small Bedroom: Optimized with a built-in daybed nestled under the sloped ceiling, utilizing the floor cutouts.',
+          ],
+        },
+        {
+          badge: 'Layout Idea 3',
+          title: 'The Luxury Ensuite Master with Walk-In Wardrobe',
+          paragraphs: [
+            "The ultimate 'hotel-suite' experience. This treats the entire 1st floor as a private, open-concept luxury sanctuary.",
+            'The Spatial Flow: No heavy dividing walls here. We keep the space entirely open-concept, using partial-height pony walls or elegant tinted-glass partitions to define zones without blocking the light flowing across the space.',
+            "The Walk-In Wardrobe: Built into the lowest eave sections (referencing the deep slope). We install custom, back-lit open cabinetry and wardrobe rails tailored specifically to the angle of the roof. It turns a 'dead space' into a high-end boutique display.",
+            'The Open Ensuite: A freestanding soaking tub or a sleek glass-enclosed walk-in shower is positioned directly under one of the skylights, allowing you to stargaze while relaxing.',
+          ],
+        },
+      ],
     },
     features: {
       label: 'Features',
@@ -262,6 +332,41 @@ export const translations = {
       prev: 'Vorherige',
       next: 'Nächste',
     },
+    layouts: {
+      label: 'Raumgestaltung',
+      title: 'Designkonzept für die Grundrisse des 1. Obergeschosses zur Optimierung von Funktionalität und Stil Ihres Lofts',
+      ideas: [
+        {
+          badge: 'Raumidee 1',
+          title: 'Das ausgewogene Zwei-Schlafzimmer-Layout',
+          paragraphs: [
+            'Dieses Konzept zielt darauf ab, die Grundfläche optimal zu nutzen und zwei unabhängige, funktionale Schlafzimmer zu schaffen – ideal für Gäste, Familie oder eine Wohngemeinschaft.',
+            'Der Raumfluss: Wir nutzen den zentralen Treppenabsatz als natürlichen Teiler. Eine mittige Trockenwand verläuft senkrecht zur Länge des Lofts und teilt den Raum in ein linkes und ein rechtes Schlafzimmer. Niedrige Plattformbetten (mit integrierten Schubladen darunter) werden direkt unter der Dachschräge platziert.',
+          ],
+        },
+        {
+          badge: 'Raumidee 2',
+          title: 'Eine Master-Suite + Ein kompaktes Schlafzimmer/Büro',
+          paragraphs: [
+            'Dieses Konzept zielt darauf ab, die Grundfläche optimal zu nutzen und zwei unabhängige, funktionale Schlafzimmer zu schaffen – ideal für Gäste, Familie oder eine Wohngemeinschaft.',
+            'Dieses Layout priorisiert ein hochwertiges Hauptzimmer und behält gleichzeitig einen sehr funktionalen, etwas kleineren Nebenraum.',
+            'Der Raumfluss: Die Master-Suite nimmt etwa 60 % des Grundrisses ein und nutzt die Seite mit der tiefsten Nische und den besten Lichtverhältnissen. Die verbleibenden 40 % werden als gemütliches Einzelzimmer, Kinderzimmer oder hochwertiges Homeoffice gestaltet.',
+            'Die Master-Suite: Ein Kingsize-Bett steht an der flachen Giebelwand und nicht unter der Schräge, was volle Stehhöhe beim Ein- und Aussteigen ermöglicht.',
+            'Das kleine Schlafzimmer: Mit einem integrierten Tagesbett unter der Dachschräge optimiert, das die Bodenöffnungen nutzt.',
+          ],
+        },
+        {
+          badge: 'Raumidee 3',
+          title: 'Die Luxus-En-Suite mit begehbarem Kleiderschrank',
+          paragraphs: [
+            'Das ultimative „Hotel-Suite"-Erlebnis. Das gesamte 1. Obergeschoss wird zu einem privaten, offenen Luxussanktuar.',
+            'Der Raumfluss: Keine schweren Trennwände. Wir halten den Raum vollständig offen, mit Halbwänden oder eleganten Glasschiebewänden, die Zonen definieren, ohne das Licht zu blockieren.',
+            'Der begehbare Kleiderschrank: In die niedrigsten Dachbereiche eingebaut. Maßgefertigte, hinterleuchtete Schränke und Kleiderständer, die an den Dachwinkel angepasst sind, verwandeln einen „toten Raum" in einen exklusiven Boutique-Bereich.',
+            'Das offene Badezimmer: Eine freistehende Badewanne oder eine elegante Glasdusche direkt unter einem Dachfenster – zum Entspannen unter dem Sternenhimmel.',
+          ],
+        },
+      ],
+    },
     features: {
       label: 'Merkmale',
       title: 'Was dieses Loft einzigartig macht',
@@ -365,6 +470,41 @@ export const translations = {
       prev: 'Precedente',
       next: 'Successivo',
     },
+    layouts: {
+      label: 'Progettazione',
+      title: 'Progetto di design per i layout del 1° piano che ottimizzano funzionalità e stile per il vostro loft',
+      ideas: [
+        {
+          badge: 'Idea di Layout 1',
+          title: 'Il Layout Bilocale Equilibrato',
+          paragraphs: [
+            'Questa configurazione punta a massimizzare lo spazio per creare due camere da letto indipendenti e funzionali, perfette per ospiti, famiglia o coinquilini.',
+            'Il flusso spaziale: Utilizziamo il pianerottolo centrale come divisore naturale. Una parete in cartongesso corre perpendicolarmente alla lunghezza del loft, dividendo lo spazio in camera sinistra e camera destra. Letti a piattaforma bassi (con cassetti integrati sotto) sono posizionati direttamente sotto la pendenza.',
+          ],
+        },
+        {
+          badge: 'Idea di Layout 2',
+          title: 'Una Suite Principale + Una Camera Compatta/Ufficio',
+          paragraphs: [
+            'Questa configurazione punta a massimizzare lo spazio per creare due camere da letto indipendenti e funzionali, perfette per ospiti, famiglia o coinquilini.',
+            'Questo layout privilegia una camera principale di alto livello mantenendo uno spazio secondario altamente funzionale e leggermente più piccolo.',
+            'Il flusso spaziale: La Suite Principale occupa circa il 60% della pianta, sfruttando il lato del loft con il rientro più profondo e la migliore esposizione alle finestre. Il restante 40% è ricavato come camera singola accogliente, cameretta o home office di lusso.',
+            'La Suite Principale: Un letto king-size è posizionato contro la parete del timpano piatta anziché sotto la pendenza, garantendo altezza piena per entrare e uscire dal letto.',
+            'La Piccola Camera: Ottimizzata con un letto a ribalta integrato sotto il soffitto inclinato, sfruttando le aperture nel pavimento.',
+          ],
+        },
+        {
+          badge: 'Idea di Layout 3',
+          title: 'La Suite Principale di Lusso con Cabina Armadio',
+          paragraphs: [
+            "L'esperienza definitiva da 'suite d'hotel'. L'intero 1° piano diventa un lussuoso santuario privato e open-space.",
+            'Il flusso spaziale: Nessuna parete divisoria pesante. Manteniamo lo spazio completamente open, usando mezze pareti o eleganti partizioni in vetro tintato per definire le zone senza bloccare la luce.',
+            "La Cabina Armadio: Costruita nelle sezioni più basse del tetto. Armadi retroilluminati su misura e binari per appendiabiti adattati all'angolo del tetto trasformano uno 'spazio morto' in un lussuoso showroom.",
+            'Il Bagno Aperto: Una vasca freestanding o una doccia walk-in in vetro è posizionata direttamente sotto uno dei lucernari, per contemplare le stelle mentre ci si rilassa.',
+          ],
+        },
+      ],
+    },
     features: {
       label: 'Caratteristiche',
       title: 'Cosa rende unico questo loft',
@@ -467,6 +607,41 @@ export const translations = {
       close: '关闭',
       prev: '上一张',
       next: '下一张',
+    },
+    layouts: {
+      label: '空间规划',
+      title: '一楼平面布局设计方案，为您的阁楼打造兼顾功能性与美学的理想空间',
+      ideas: [
+        {
+          badge: '方案一',
+          title: '均衡双卧室布局',
+          paragraphs: [
+            '此方案旨在最大化空间利用，打造两间独立、实用的卧室，非常适合接待宾客、家庭居住或合租。',
+            '空间动线：以中央楼梯平台为天然分隔点。一道轻钢龙骨隔墙垂直于阁楼长轴延伸，将空间划分为左卧室和右卧室。低矮的榻榻米平台床（底部配有内嵌储物抽屉）直接设于坡面之下。',
+          ],
+        },
+        {
+          badge: '方案二',
+          title: '主卧套房 + 一间紧凑卧室/书房',
+          paragraphs: [
+            '此方案旨在最大化空间利用，打造两间独立、实用的卧室，非常适合接待宾客、家庭居住或合租。',
+            '此布局以高品质主卧为核心，同时保留一个功能齐备、略小的次卧空间。',
+            '空间动线：主卧套房约占整个平面的60%，位于阁楼凹入最深、采光最佳的一侧。其余40%空间打造为温馨单人卧室、婴儿房或高端家庭办公室。',
+            '主卧配置：特大号床靠平整的山墙摆放而非置于坡面下方，确保上下床时拥有充足净空高度。',
+            '次卧：采用内嵌式日床设计，嵌入斜面天花板下方，充分利用地板开口区域。',
+          ],
+        },
+        {
+          badge: '方案三',
+          title: '带步入式衣帽间的豪华套房',
+          paragraphs: [
+            '终极"酒店套房"体验。将整个一楼打造为私密的开放式奢华空间。',
+            '空间动线：无需厚重隔墙。整体空间保持全开放格局，以半高矮墙或优雅茶色玻璃隔断划分区域，既不遮挡光线，又层次分明。',
+            '步入式衣帽间：设于屋檐最低处。定制背光橱柜与专为屋顶坡度量身定制的挂衣杆，将原本的"死角空间"化为高端精品展示区。',
+            '开放式套浴：一座独立式浴缸或简约全玻璃步入式淋浴间直接设于天窗之下，让您在沐浴放松时仰望星空。',
+          ],
+        },
+      ],
     },
     features: {
       label: '特色',
