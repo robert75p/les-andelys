@@ -48,7 +48,7 @@ export default function Navbar() {
                 scrolled ? 'text-stone-900' : 'text-white'
               )}
             >
-              Les Andelys
+              Adresse Privée
             </span>
             <span
               className={clsx(
@@ -149,7 +149,7 @@ export default function Navbar() {
             className="fixed inset-0 z-[60] bg-[#1A1815] flex flex-col"
           >
             <div className="flex items-center justify-between px-6 h-16">
-              <span className="font-cormorant italic text-xl text-white">Les Andelys</span>
+              <span className="font-cormorant italic text-xl text-white">Adresse Privée</span>
               <button onClick={() => setMobileOpen(false)} aria-label="Close menu">
                 <X className="w-6 h-6 text-white" />
               </button>

@@ -20,7 +20,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-baseline gap-2 mb-3">
-              <span className="font-cormorant italic text-2xl">Les Andelys</span>
+              <span className="font-cormorant italic text-2xl">Adresse Privée</span>
               <span className="font-dm text-xs font-light uppercase tracking-widest text-white/50">
                 Immobilier
               </span>

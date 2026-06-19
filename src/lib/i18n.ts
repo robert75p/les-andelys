@@ -144,7 +144,7 @@ export const translations = {
       tagline: "L'art de l'immobilier en Normandie",
       legal: 'Mentions légales',
       privacy: 'Politique de confidentialité',
-      copyright: '© 2024 Adresse Privée Immobilier',
+      copyright: '© 2026 Adresse Privée Immobilier',
     },
   },
   en: {
@@ -282,7 +282,7 @@ export const translations = {
       tagline: 'The art of real estate in Normandy',
       legal: 'Legal Notice',
       privacy: 'Privacy Policy',
-      copyright: '© 2024 Adresse Privée Immobilier',
+      copyright: '© 2026 Adresse Privée Immobilier',
     },
   },
   de: {
@@ -420,7 +420,7 @@ export const translations = {
       tagline: 'Die Kunst der Immobilien in der Normandie',
       legal: 'Impressum',
       privacy: 'Datenschutzerklärung',
-      copyright: '© 2024 Adresse Privée Immobilier',
+      copyright: '© 2026 Adresse Privée Immobilier',
     },
   },
   it: {
@@ -558,7 +558,7 @@ export const translations = {
       tagline: "L'arte dell'immobiliare in Normandia",
       legal: 'Note legali',
       privacy: 'Informativa sulla privacy',
-      copyright: '© 2024 Adresse Privée Immobilier',
+      copyright: '© 2026 Adresse Privée Immobilier',
     },
   },
   zh: {
@@ -696,7 +696,7 @@ export const translations = {
       tagline: '诺曼底房地产的艺术',
       legal: '法律声明',
       privacy: '隐私政策',
-      copyright: '© 2024 Adresse Privée Immobilier',
+      copyright: '© 2026 Adresse Privée Immobilier',
     },
   },
 } as const
