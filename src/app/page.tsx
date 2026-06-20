@@ -33,8 +33,8 @@ const properties = [
     size: '38 m²',
     rooms: '2',
     roomsLabel: 'pièces',
-    image: '/pictures/Paris-15e/living-1.jpeg',
-    tags: ['Conciergerie', 'Cave aménagée', 'Cour intérieure'],
+    image: '/pictures/Paris-15e/living-2.jpeg',
+    tags: ['Conciergerie', 'Cave aménagée', 'Cour intérieure', 'Parking sécurisé'],
     description:
       'Appartement 2 pièces lumineux et entièrement rénové au cœur du 15e arrondissement, ouvrant sur une cour intérieure calme.',
   },
