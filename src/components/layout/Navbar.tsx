@@ -6,15 +6,47 @@ import { Menu, X, ChevronLeft } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useLanguage } from '@/lib/LanguageContext'
-import { locales } from '@/lib/i18n'
+import { locales, type Locale } from '@/lib/i18n'
 import clsx from 'clsx'
+import * as Flags from 'country-flag-icons/react/3x2'
+
+const localeToFlag: Record<Locale, keyof typeof Flags> = {
+  fr: 'FR',
+  en: 'GB',
+  de: 'DE',
+  it: 'IT',
+  zh: 'CN',
+}
+
+function FlagSwitcher({ locale, setLocale }: { locale: Locale; setLocale: (l: Locale) => void }) {
+  return (
+    <div className="flex items-center gap-2">
+      {locales.map((l) => {
+        const FlagIcon = Flags[localeToFlag[l.code]]
+        return (
+          <button
+            key={l.code}
+            onClick={() => setLocale(l.code)}
+            title={l.label}
+            aria-label={l.label}
+            className={clsx(
+              'transition-all duration-200 hover:scale-110 rounded-sm overflow-hidden',
+              locale === l.code ? 'opacity-100 scale-110 ring-1 ring-[#C4A882]' : 'opacity-35 hover:opacity-70'
+            )}
+          >
+            <FlagIcon className="w-6 h-auto block" />
+          </button>
+        )
+      })}
+    </div>
+  )
+}
 
 export default function Navbar() {
   const { t, locale, setLocale } = useLanguage()
   const pathname = usePathname()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [langOpen, setLangOpen] = useState(false)
 
   const isHome = pathname === '/'
 
@@ -23,8 +55,6 @@ export default function Navbar() {
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
-
-  const currentLocale = locales.find((l) => l.code === locale)
 
   const navLinks = [
     { href: '#property', label: t.nav.property },
@@ -96,44 +126,7 @@ export default function Navbar() {
             ))}
 
             {/* Language switcher */}
-            <div className="relative">
-              <button
-                onClick={() => setLangOpen((o) => !o)}
-                className={clsx(
-                  'flex items-center gap-1.5 font-dm text-sm transition-colors hover:opacity-70',
-                  scrolled ? 'text-stone-700' : 'text-white'
-                )}
-                aria-label="Change language"
-              >
-                <span className="text-base">{currentLocale?.flag}</span>
-                <span className="uppercase tracking-wider text-xs">{locale}</span>
-              </button>
-              <AnimatePresence>
-                {langOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -8 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute right-0 top-8 bg-white rounded-lg shadow-xl border border-stone-100 overflow-hidden py-1 min-w-[140px]"
-                  >
-                    {locales.map((l) => (
-                      <button
-                        key={l.code}
-                        onClick={() => { setLocale(l.code); setLangOpen(false) }}
-                        className={clsx(
-                          'w-full flex items-center gap-2.5 px-4 py-2 text-sm font-dm text-left hover:bg-stone-50 transition-colors',
-                          locale === l.code ? 'text-amber-700 font-medium' : 'text-stone-700'
-                        )}
-                      >
-                        <span className="text-base">{l.flag}</span>
-                        <span>{l.label}</span>
-                      </button>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+            <FlagSwitcher locale={locale} setLocale={setLocale} />
 
             {!isHome && (
               <a
@@ -213,20 +206,24 @@ export default function Navbar() {
                 </a>
               )}
               {/* Mobile language switcher */}
-              <div className="flex gap-4 mt-4">
-                {locales.map((l) => (
-                  <button
-                    key={l.code}
-                    onClick={() => { setLocale(l.code); setMobileOpen(false) }}
-                    className={clsx(
-                      'text-xl transition-opacity',
-                      locale === l.code ? 'opacity-100' : 'opacity-40'
-                    )}
-                    aria-label={l.label}
-                  >
-                    {l.flag}
-                  </button>
-                ))}
+              <div className="flex gap-3 mt-4">
+                {locales.map((l) => {
+                  const FlagIcon = Flags[localeToFlag[l.code]]
+                  return (
+                    <button
+                      key={l.code}
+                      onClick={() => { setLocale(l.code); setMobileOpen(false) }}
+                      title={l.label}
+                      aria-label={l.label}
+                      className={clsx(
+                        'rounded-sm overflow-hidden transition-all duration-200',
+                        locale === l.code ? 'opacity-100 scale-110 ring-1 ring-[#C4A882]' : 'opacity-30'
+                      )}
+                    >
+                      <FlagIcon className="w-8 h-auto block" />
+                    </button>
+                  )
+                })}
               </div>
             </div>
           </motion.div>

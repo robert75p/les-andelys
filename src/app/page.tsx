@@ -1,46 +1,42 @@
-import type { Metadata } from 'next'
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { MapPin } from 'lucide-react'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
-
-export const metadata: Metadata = {
-  title: 'Adresse Privée Immobilier — Nos Propriétés',
-  description:
-    'Adresse Privée Immobilier — deux propriétés d\'exception : un loft en Normandie et un appartement au cœur du 15e arrondissement de Paris.',
-}
-
-const properties = [
-  {
-    slug: 'les-andelys',
-    name: 'Le Loft des Andelys',
-    location: 'Les Andelys, Normandie (27700)',
-    price: '€425 000',
-    size: '147 m²',
-    rooms: '2/3',
-    roomsLabel: 'chambres',
-    image: '/pictures/house/loft-1.jfif',
-    tags: ['Poutres apparentes', 'Plafonds 6 m', 'Cour privée'],
-    description:
-      'Loft exceptionnel au cœur de la Normandie médiévale — poutres en chêne massif, plafonds voûtés à 6 m et lumière naturelle abondante.',
-  },
-  {
-    slug: 'paris-15e',
-    name: 'Appartement Paris 15e',
-    location: '18 Rue Yvart, 75015 Paris',
-    price: '€445 000',
-    size: '38 m²',
-    rooms: '2',
-    roomsLabel: 'pièces',
-    image: '/pictures/Paris-15e/living-2.jpeg',
-    tags: ['Conciergerie', 'Cave aménagée', 'Cour intérieure', 'Parking sécurisé'],
-    description:
-      'Appartement 2 pièces lumineux et entièrement rénové au cœur du 15e arrondissement, ouvrant sur une cour intérieure calme.',
-  },
-]
+import { useLanguage } from '@/lib/LanguageContext'
 
 export default function HomePage() {
+  const { t } = useLanguage()
+
+  const properties = [
+    {
+      slug: 'les-andelys',
+      name: t.hero.title,
+      location: 'Les Andelys, Normandie (27700)',
+      price: '€425 000',
+      size: t.overview.stats.size,
+      rooms: t.overview.stats.bedrooms,
+      roomsLabel: t.overview.stats.bedroomsLabel,
+      image: '/pictures/house/loft-1.jfif',
+      tags: t.overview.features.slice(0, 3),
+      description: t.overview.description,
+    },
+    {
+      slug: 'paris-15e',
+      name: t.paris15e.home.name,
+      location: '18 Rue Yvart, 75015 Paris',
+      price: '€445 000',
+      size: '38 m²',
+      rooms: '2',
+      roomsLabel: t.paris15e.overview.floatingBedrooms.replace(/^\S+\s*/, ''),
+      image: '/pictures/Paris-15e/living-2.jpeg',
+      tags: [...t.paris15e.home.tags],
+      description: t.paris15e.home.description,
+    },
+  ]
+
   return (
     <>
       <Navbar />
@@ -51,10 +47,10 @@ export default function HomePage() {
             Adresse Privée Immobilier
           </p>
           <h1 className="font-cormorant italic text-[clamp(2.5rem,5vw,4.5rem)] text-stone-900 leading-tight">
-            Nos Propriétés
+            {t.nav.allProperties}
           </h1>
           <p className="font-dm text-sm text-stone-500 mt-4 max-w-md mx-auto leading-relaxed">
-            Deux biens d&apos;exception sélectionnés avec soin, en vente en exclusivité.
+            {t.home.subtitle}
           </p>
         </div>
 
@@ -88,7 +84,7 @@ export default function HomePage() {
                       <span className="font-dm text-xs">{p.location}</span>
                     </div>
 
-                    <p className="font-dm text-sm text-stone-500 leading-relaxed mb-5">
+                    <p className="font-dm text-sm text-stone-500 leading-relaxed mb-5 line-clamp-3">
                       {p.description}
                     </p>
 
@@ -97,7 +93,7 @@ export default function HomePage() {
                       <div>
                         <p className="font-cormorant text-2xl text-stone-900">{p.size}</p>
                         <p className="font-dm text-xs uppercase tracking-widest text-stone-400 mt-0.5">
-                          Surface
+                          {t.home.surface}
                         </p>
                       </div>
                       <div className="w-px h-10 bg-stone-200" />
@@ -123,7 +119,7 @@ export default function HomePage() {
 
                     {/* CTA */}
                     <div className="flex items-center justify-end gap-2 text-[#C4A882]">
-                      <span className="font-dm text-sm">Découvrir</span>
+                      <span className="font-dm text-sm">{t.home.discover}</span>
                       <span className="group-hover:translate-x-1 transition-transform duration-300 inline-block">
                         →
                       </span>

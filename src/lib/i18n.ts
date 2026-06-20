@@ -141,6 +141,53 @@ export const translations = {
         email: 'contact@adresse-privee.fr',
       },
     },
+    home: {
+      subtitle: "Deux biens d'exception sélectionnés avec soin, en vente en exclusivité.",
+      surface: 'Surface',
+      discover: 'Découvrir',
+    },
+    paris15e: {
+      home: {
+        name: 'Appartement Paris 15e',
+        description: 'Appartement 2 pièces lumineux et entièrement rénové au cœur du 15e arrondissement, ouvrant sur une cour intérieure calme.',
+        tags: ['Conciergerie', 'Cave aménagée', 'Cour intérieure', 'Parking sécurisé'],
+      },
+      hero: {
+        region: 'PARIS 15e · ÎLE-DE-FRANCE',
+        title: 'Appartement Paris 15e',
+        subtitle: '38 m² · 2 pièces · RDC · €445 000',
+      },
+      overview: {
+        title: 'Un appartement lumineux au cœur du 15e',
+        description: "À quelques pas de la Rue de la Convention, et des transports, au coeur du 15e arrondissement, découvrez ce bel appartement 2 pièces de 38 m², situé au RDC d'une copropriété propre et bien entretenue, ravalée avec ascenseur et gardien. Entièrement rénové avec des prestations de qualité, il propose un espace de vie lumineux ouvrant sur une cour intérieure, une cuisine fonctionnelle, 1 chambre lumineuse ainsi qu'un agencement optimisé. Son environnement calme, sa luminosité et sa vue dégagée offrent un cadre de vie particulièrement agréable. À proximité immédiate des commerces et des établissements scolaires, ainsi que du métro Convention / Vaugirard.",
+        features: [
+          'Appartement entièrement rénové avec finitions soignées',
+          'Séjour lumineux ouvrant sur cour intérieure calme',
+          'Cuisine fonctionnelle équipée',
+          '1 chambre lumineuse avec rangements intégrés',
+          'Immeuble avec ascenseur, gardien et double sécurité',
+          'Cave privative — proximité parking',
+        ],
+        floatingBedrooms: '2 pièces',
+        caveLabel: 'Cave',
+      },
+      gallery: { quote: 'Un appartement lumineux et calme au cœur du 15e arrondissement' },
+      features: {
+        title: 'Ce qui rend cet appartement unique',
+        items: [
+          { title: 'Conciergerie', desc: 'Gardien présent assurant sécurité et gestion de la résidence 5j/7.' },
+          { title: 'Sécurité', desc: 'Double portes sécurisées et interphone pour une tranquillité absolue.' },
+          { title: 'Cave Aménagée', desc: 'Cave privative en sous-sol, optimisant le rangement au quotidien.' },
+          { title: 'Parking', desc: 'Place de stationnement disponible, un atout rare au cœur du 15e arrondissement.' },
+          { title: 'Luminosité', desc: 'Appartement baigné de lumière naturelle, ouvrant sur cour intérieure calme, sans vis-à-vis.' },
+          { title: 'Cadre Calme', desc: 'Environnement résidentiel paisible à deux pas de toutes les commodités et des transports.' },
+        ],
+      },
+      location: {
+        title: 'Explorer le 15e arrondissement',
+        description: 'Le 15e arrondissement, le plus grand et le plus peuplé de Paris, est un quartier résidentiel dynamique, à la fois calme et bien desservi. Commerces, écoles, marchés et transports sont tous à portée de main, avec le métro Convention et Vaugirard à proximité immédiate.',
+      },
+    },
     footer: {
       tagline: "L'art de l'immobilier en Normandie",
       legal: 'Mentions légales',
@@ -278,6 +325,53 @@ export const translations = {
         name: 'Michel G.',
         title: 'Owner',
         email: 'contact@adresse-privee.fr',
+      },
+    },
+    home: {
+      subtitle: 'Two exceptional properties selected with care, available for exclusive sale.',
+      surface: 'Floor Area',
+      discover: 'Discover',
+    },
+    paris15e: {
+      home: {
+        name: 'Paris 15th Apartment',
+        description: 'Bright 2-room apartment, fully renovated in the heart of the 15th arrondissement, opening onto a quiet inner courtyard.',
+        tags: ['Concierge', 'Private cellar', 'Inner courtyard', 'Secured parking'],
+      },
+      hero: {
+        region: 'PARIS 15th · ÎLE-DE-FRANCE',
+        title: 'Paris 15th Apartment',
+        subtitle: '38 m² · 2 rooms · Ground floor · €445,000',
+      },
+      overview: {
+        title: 'A bright apartment in the heart of the 15th',
+        description: 'A few steps from Rue de la Convention and transport links, in the heart of the 15th arrondissement, discover this beautiful 2-room, 38 m² apartment on the ground floor of a well-maintained building with lift and concierge. Fully renovated with quality fittings, it offers a bright living space opening onto a quiet inner courtyard, a functional kitchen, 1 bright bedroom and an optimised layout. Its calm environment, natural light and open views offer a particularly pleasant living experience. Within immediate reach of shops, schools, and the Convention / Vaugirard metro.',
+        features: [
+          'Fully renovated apartment with quality finishes',
+          'Bright living room opening onto a quiet inner courtyard',
+          'Functional fitted kitchen',
+          '1 bright bedroom with built-in storage',
+          'Building with lift, concierge and double security',
+          'Private cellar — nearby parking',
+        ],
+        floatingBedrooms: '2 rooms',
+        caveLabel: 'Cellar',
+      },
+      gallery: { quote: 'A bright and peaceful apartment in the heart of the 15th arrondissement' },
+      features: {
+        title: 'What makes this apartment unique',
+        items: [
+          { title: 'Concierge', desc: 'Concierge service 5 days a week ensuring security and building management.' },
+          { title: 'Security', desc: 'Double security doors and intercom for complete peace of mind.' },
+          { title: 'Private Cellar', desc: 'Private basement cellar, optimising day-to-day storage.' },
+          { title: 'Parking', desc: 'Parking space available — a rare asset in the heart of the 15th.' },
+          { title: 'Natural Light', desc: 'Apartment bathed in natural light, opening onto a quiet inner courtyard with no overlooking neighbours.' },
+          { title: 'Peaceful Setting', desc: 'Calm residential environment within easy reach of all amenities and transport links.' },
+        ],
+      },
+      location: {
+        title: 'Explore the 15th arrondissement',
+        description: 'The 15th arrondissement, the largest and most populous in Paris, is a dynamic residential neighbourhood — peaceful yet well connected, with shops, schools, markets and transport all within easy reach, including the Convention and Vaugirard metro stations.',
       },
     },
     footer: {
@@ -419,6 +513,53 @@ export const translations = {
         email: 'contact@adresse-privee.fr',
       },
     },
+    home: {
+      subtitle: 'Zwei außergewöhnliche Objekte sorgfältig ausgewählt, exklusiv zum Verkauf.',
+      surface: 'Wohnfläche',
+      discover: 'Entdecken',
+    },
+    paris15e: {
+      home: {
+        name: 'Apartment Paris 15.',
+        description: 'Helle 2-Zimmer-Wohnung, vollständig renoviert im Herzen des 15. Arrondissements, mit Blick auf ruhigen Innenhof.',
+        tags: ['Hausmeister', 'Privater Keller', 'Innenhof', 'Sicherheitsparkplatz'],
+      },
+      hero: {
+        region: 'PARIS 15. · ÎLE-DE-FRANCE',
+        title: 'Apartment Paris 15.',
+        subtitle: '38 m² · 2 Zimmer · EG · €445.000',
+      },
+      overview: {
+        title: 'Eine lichtdurchflutete Wohnung im Herzen des 15.',
+        description: 'Nur wenige Schritte von der Rue de la Convention und den Verkehrsanbindungen entfernt, im Herzen des 15. Arrondissements, entdecken Sie diese schöne 2-Zimmer-Wohnung von 38 m², im Erdgeschoss eines gepflegten Gebäudes mit Aufzug und Hausmeister. Vollständig renoviert mit hochwertiger Ausstattung, bietet sie einen hellen Wohnbereich mit Blick auf einen ruhigen Innenhof, eine funktionale Küche, 1 helles Schlafzimmer sowie eine optimierte Raumaufteilung. In unmittelbarer Nähe von Geschäften, Schulen und der Metro Convention / Vaugirard.',
+        features: [
+          'Vollständig renovierte Wohnung mit hochwertigen Oberflächen',
+          'Helles Wohnzimmer mit Blick auf ruhigen Innenhof',
+          'Funktionale, ausgestattete Küche',
+          '1 helles Schlafzimmer mit Einbauschränken',
+          'Gebäude mit Aufzug, Hausmeister und doppelter Sicherheit',
+          'Privater Keller — Parkplatz in der Nähe',
+        ],
+        floatingBedrooms: '2 Zimmer',
+        caveLabel: 'Keller',
+      },
+      gallery: { quote: 'Eine lichtdurchflutete und ruhige Wohnung im Herzen des 15. Arrondissements' },
+      features: {
+        title: 'Was diese Wohnung einzigartig macht',
+        items: [
+          { title: 'Hausmeister', desc: 'Hausmeister 5 Tage die Woche für Sicherheit und Gebäudeverwaltung.' },
+          { title: 'Sicherheit', desc: 'Doppelte Sicherheitstüren und Gegensprechanlage für absolute Ruhe.' },
+          { title: 'Privater Keller', desc: 'Privater Kellerverschlag im Untergeschoss für optimale Staumöglichkeiten.' },
+          { title: 'Parkplatz', desc: 'Stellplatz verfügbar — ein seltener Vorteil im Herzen des 15.' },
+          { title: 'Lichtdurchflutet', desc: 'Wohnung mit reichlich natürlichem Licht, Blick auf ruhigen Innenhof ohne Einsicht.' },
+          { title: 'Ruhige Lage', desc: 'Ruhiges Wohnviertel in unmittelbarer Nähe aller Annehmlichkeiten und Verkehrsmittel.' },
+        ],
+      },
+      location: {
+        title: 'Das 15. Arrondissement entdecken',
+        description: 'Das 15. Arrondissement, das größte und bevölkerungsreichste in Paris, ist ein dynamisches Wohnviertel — ruhig und zugleich gut angebunden. Geschäfte, Schulen, Märkte und Verkehrsmittel sind alle in unmittelbarer Nähe, darunter die Metrostationen Convention und Vaugirard.',
+      },
+    },
     footer: {
       tagline: 'Die Kunst der Immobilien in der Normandie',
       legal: 'Impressum',
@@ -558,6 +699,53 @@ export const translations = {
         email: 'contact@adresse-privee.fr',
       },
     },
+    home: {
+      subtitle: 'Due proprietà eccezionali selezionate con cura, in vendita in esclusiva.',
+      surface: 'Superficie',
+      discover: 'Scopri',
+    },
+    paris15e: {
+      home: {
+        name: 'Appartamento Parigi 15°',
+        description: 'Bilocale luminoso, completamente ristrutturato nel cuore del 15° arrondissement, aperto su un tranquillo cortile interno.',
+        tags: ['Portiere', 'Cantina privata', 'Cortile interno', 'Parcheggio sicuro'],
+      },
+      hero: {
+        region: 'PARIGI 15° · ÎLE-DE-FRANCE',
+        title: 'Appartamento Parigi 15°',
+        subtitle: '38 m² · 2 locali · PT · €445.000',
+      },
+      overview: {
+        title: 'Un appartamento luminoso nel cuore del 15°',
+        description: "A pochi passi da Rue de la Convention e dai trasporti, nel cuore del 15° arrondissement, scoprite questo bel bilocale di 38 m², situato al piano terra di una copropietà pulita e ben tenuta, con ascensore e portiere. Completamente ristrutturato con finiture di qualità, offre uno spazio living luminoso che si apre su un cortile interno tranquillo, una cucina funzionale, 1 camera luminosa e una disposizione ottimizzata. Il suo ambiente tranquillo, la luminosità e la vista libera offrono una qualità di vita particolarmente piacevole. Vicinissimo a negozi, scuole e alle fermate metro Convention / Vaugirard.",
+        features: [
+          'Appartamento completamente ristrutturato con finiture curate',
+          'Soggiorno luminoso che si apre su un cortile interno tranquillo',
+          'Cucina funzionale attrezzata',
+          '1 camera luminosa con armadi integrati',
+          'Edificio con ascensore, portiere e doppia sicurezza',
+          'Cantina privata — parcheggio nelle vicinanze',
+        ],
+        floatingBedrooms: '2 locali',
+        caveLabel: 'Cantina',
+      },
+      gallery: { quote: 'Un appartamento luminoso e tranquillo nel cuore del 15° arrondissement' },
+      features: {
+        title: 'Cosa rende unico questo appartamento',
+        items: [
+          { title: 'Portiere', desc: 'Portiere presente 5 giorni su 7 per sicurezza e gestione del palazzo.' },
+          { title: 'Sicurezza', desc: 'Doppie porte di sicurezza e videocitofono per una tranquillità assoluta.' },
+          { title: 'Cantina Privata', desc: 'Cantina privata nel seminterrato, per ottimizzare lo spazio di stoccaggio.' },
+          { title: 'Parcheggio', desc: 'Posto auto disponibile — un vantaggio raro nel cuore del 15°.' },
+          { title: 'Luminosità', desc: 'Appartamento inondato di luce naturale, aperto su un cortile tranquillo senza affacci.' },
+          { title: 'Ambiente Tranquillo', desc: 'Contesto residenziale pacifico a due passi da tutti i servizi e dai trasporti.' },
+        ],
+      },
+      location: {
+        title: 'Esplorare il 15° arrondissement',
+        description: 'Il 15° arrondissement, il più grande e popoloso di Parigi, è un quartiere residenziale dinamico — tranquillo ma ben collegato, con negozi, scuole, mercati e mezzi di trasporto a portata di mano, incluse le stazioni metro Convention e Vaugirard.',
+      },
+    },
     footer: {
       tagline: "L'arte dell'immobiliare in Normandia",
       legal: 'Note legali',
@@ -695,6 +883,53 @@ export const translations = {
         name: 'Michel G.（房产所有者）',
         title: '所有者',
         email: 'contact@adresse-privee.fr',
+      },
+    },
+    home: {
+      subtitle: '两处精心挑选的非凡房产，独家出售。',
+      surface: '建筑面积',
+      discover: '探索',
+    },
+    paris15e: {
+      home: {
+        name: '巴黎15区公寓',
+        description: '明亮的两居室公寓，位于15区心脏地带，经过全面翻修，俯瞰宁静内院。',
+        tags: ['门卫服务', '私人地窖', '内院', '安全停车'],
+      },
+      hero: {
+        region: '巴黎15区 · 法兰西岛',
+        title: '巴黎15区公寓',
+        subtitle: '38平方米 · 2室 · 底层 · €445,000',
+      },
+      overview: {
+        title: '15区心脏地带的明亮公寓',
+        description: '距Convention街和交通枢纽仅数步之遥，位于15区核心地带，这套38平米的两居室公寓坐落于配备电梯和管理员的整洁公寓楼底层。经过全面翻修，配备优质设施，公寓提供明亮的生活空间，可俯瞰宁静的内院，配有实用厨房和1间明亮卧室，布局合理。宁静的环境、充足的采光和开阔的视野营造出极为宜居的生活氛围。紧邻商店、学校以及Convention/Vaugirard地铁站。',
+        features: [
+          '公寓经过全面翻修，装修精良',
+          '明亮客厅，朝向宁静内院',
+          '实用配备厨房',
+          '1间明亮卧室，配有内置储物',
+          '配备电梯、管理员和双重安全的楼栋',
+          '私人地窖 — 附近有停车位',
+        ],
+        floatingBedrooms: '2室',
+        caveLabel: '地窖',
+      },
+      gallery: { quote: '15区心脏地带明亮宁静的公寓' },
+      features: {
+        title: '这套公寓的独特之处',
+        items: [
+          { title: '门卫服务', desc: '管理员每周5天在岗，保障楼栋安全与管理。' },
+          { title: '安全系统', desc: '双重安全门和对讲机，彻底放心无忧。' },
+          { title: '私人地窖', desc: '地下室私人地窖，日常储物更便捷。' },
+          { title: '停车位', desc: '停车位可用 — 15区核心地带难得资源。' },
+          { title: '采光充足', desc: '公寓沐浴充足自然光，朝向宁静内院，无对视困扰。' },
+          { title: '宁静环境', desc: '宁静住宅区，紧邻各类生活配套和交通设施。' },
+        ],
+      },
+      location: {
+        title: '探索15区',
+        description: '15区是巴黎最大、人口最多的区，是一个充满活力的住宅区——既宁静又交通便利，商店、学校、市场和交通设施应有尽有，Convention和Vaugirard地铁站近在咫尺。',
       },
     },
     footer: {
