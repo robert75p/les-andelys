@@ -64,7 +64,7 @@ const LOCATION_DATA: Omit<PropertyLocationData, 'title' | 'description'> = {
       { src: '/pictures/Paris-15e/marche-livres.jpg',  caption: 'Marché aux livres du 15e' },
     ],
   },
-  mapSrc: 'https://www.openstreetmap.org/export/embed.html?bbox=2.270%2C48.830%2C2.320%2C48.856&layer=mapnik&marker=48.8384%2C2.2955',
+  mapSrc: 'https://www.openstreetmap.org/export/embed.html?bbox=2.2775%2C48.8218%2C2.3275%2C48.8518&layer=mapnik&marker=48.8368%2C2.3025',
   mapLabel: '18 Rue Yvart, Paris 15e',
 }
 
