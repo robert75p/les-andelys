@@ -54,7 +54,7 @@ const defaultTabImages: Record<LocationTabKey, { src: string; caption: string }[
 const defaultTabKeys: LocationTabKey[] = ['restaurants', 'marche', 'culture', 'shopping', 'quartier']
 
 const defaultMapSrc =
-  'https://www.openstreetmap.org/export/embed.html?bbox=1.378%2C49.217%2C1.458%2C49.277&amp;layer=mapnik&amp;marker=49.24694%2C1.41800'
+  'https://www.openstreetmap.org/export/embed.html?bbox=1.379%2C49.216%2C1.459%2C49.276&layer=mapnik&marker=49.2458%2C1.4187'
 
 export default function Location({ data }: { data?: PropertyLocationData }) {
   const { t } = useLanguage()
