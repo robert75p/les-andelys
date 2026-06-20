@@ -4,25 +4,30 @@ import { Columns2, Sun, UtensilsCrossed, Flower2, Thermometer, Wifi } from 'luci
 import { useLanguage } from '@/lib/LanguageContext'
 import FadeInView from '@/components/ui/FadeInView'
 import SectionLabel from '@/components/ui/SectionLabel'
+import type { PropertyFeaturesData } from '@/lib/propertyTypes'
 
 const icons = [Columns2, Sun, UtensilsCrossed, Flower2, Thermometer, Wifi]
 
-export default function Features() {
+export default function Features({ data }: { data?: PropertyFeaturesData }) {
   const { t } = useLanguage()
+
+  const label = data?.label ?? t.features.label
+  const title = data?.title ?? t.features.title
+  const items = data?.items ?? [...t.features.items]
 
   return (
     <section className="bg-[#FAF8F4] py-24 lg:py-32">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24">
         <FadeInView className="mb-16">
-          <SectionLabel>{t.features.label}</SectionLabel>
+          <SectionLabel>{label}</SectionLabel>
           <h2 className="font-cormorant italic text-[clamp(2rem,4vw,3.5rem)] text-stone-900 max-w-xl leading-[1.1]">
-            {t.features.title}
+            {title}
           </h2>
         </FadeInView>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {t.features.items.map((item, i) => {
-            const Icon = icons[i]
+          {items.map((item, i) => {
+            const Icon = icons[i % icons.length]
             return (
               <FadeInView key={item.title} delay={i * 0.08}>
                 <div className="bg-[#F0ECE4] border border-stone-200/60 rounded-sm p-7 h-full hover:shadow-md transition-shadow duration-300">

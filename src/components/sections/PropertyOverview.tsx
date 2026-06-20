@@ -5,17 +5,26 @@ import { Check } from 'lucide-react'
 import { useLanguage } from '@/lib/LanguageContext'
 import FadeInView from '@/components/ui/FadeInView'
 import SectionLabel from '@/components/ui/SectionLabel'
+import type { PropertyOverviewData } from '@/lib/propertyTypes'
 
-export default function PropertyOverview() {
+export default function PropertyOverview({ data }: { data?: PropertyOverviewData }) {
   const { t } = useLanguage()
   const s = t.overview.stats
 
-  const stats = [
+  const title = data?.title ?? t.overview.title
+  const description = data?.description ?? t.overview.description
+  const features = data?.features ?? [...t.overview.features]
+  const stats = data?.stats ?? [
     { value: s.size, label: s.sizeLabel },
     { value: s.bedrooms, label: s.bedroomsLabel },
     { value: s.bathrooms, label: s.bathroomsLabel },
     { value: s.terrace, label: s.terraceLabel },
   ]
+  const price = data?.price ?? '€425 000'
+  const mainImage = data?.mainImage ?? '/pictures/house/Loft-2.jfif'
+  const floatingLabel = data?.floatingLabel ?? 'Le Loft'
+  const floatingSize = data?.floatingSize ?? '147 m²'
+  const floatingBedrooms = data?.floatingBedrooms ?? `2/3 ${s.bedroomsLabel.toLowerCase()}`
 
   return (
     <section id="property" className="bg-[#FAF8F4] py-24 lg:py-32">
@@ -27,8 +36,8 @@ export default function PropertyOverview() {
             <div className="relative">
               <div className="relative w-full aspect-[3/4] rounded-sm overflow-hidden">
                 <Image
-                  src="/pictures/house/Loft-2.jfif"
-                  alt="Loft des Andelys — espace de vie principal"
+                  src={mainImage}
+                  alt={title}
                   fill
                   className="object-cover hover:scale-[1.03] transition-transform duration-700"
                   sizes="(max-width: 1024px) 100vw, 55vw"
@@ -36,16 +45,16 @@ export default function PropertyOverview() {
               </div>
               {/* Floating stats card */}
               <div className="absolute -bottom-6 -right-6 md:bottom-8 md:-right-8 bg-white shadow-xl rounded-sm p-5 md:p-7 w-52">
-                <p className="font-dm text-xs uppercase tracking-widest text-stone-400 mb-3">Le Loft</p>
+                <p className="font-dm text-xs uppercase tracking-widest text-stone-400 mb-3">{floatingLabel}</p>
                 <div className="flex flex-col gap-2">
                   <div className="flex justify-between items-baseline">
-                    <span className="font-cormorant text-2xl text-stone-900">147 m²</span>
+                    <span className="font-cormorant text-2xl text-stone-900">{floatingSize}</span>
                   </div>
                   <div className="flex justify-between items-baseline border-t border-stone-100 pt-2">
-                    <span className="font-dm text-sm text-stone-600">2/3 {s.bedroomsLabel.toLowerCase()}</span>
+                    <span className="font-dm text-sm text-stone-600">{floatingBedrooms}</span>
                   </div>
                   <div className="flex justify-between items-baseline border-t border-stone-100 pt-2">
-                    <span className="font-cormorant text-xl text-[#C4A882]">€425 000</span>
+                    <span className="font-cormorant text-xl text-[#C4A882]">{price}</span>
                   </div>
                 </div>
               </div>
@@ -57,15 +66,15 @@ export default function PropertyOverview() {
             <FadeInView delay={0.1}>
               <SectionLabel>{t.overview.label}</SectionLabel>
               <h2 className="font-cormorant italic text-[clamp(2.2rem,4vw,3.5rem)] leading-[1.1] text-stone-900 mb-6">
-                {t.overview.title}
+                {title}
               </h2>
               <p className="font-dm text-stone-600 leading-relaxed mb-8 text-sm md:text-base">
-                {t.overview.description}
+                {description}
               </p>
             </FadeInView>
 
             <div className="flex flex-col gap-3">
-              {t.overview.features.map((feat, i) => (
+              {features.map((feat, i) => (
                 <FadeInView key={i} delay={0.15 + i * 0.07}>
                   <div className="flex items-start gap-3">
                     <Check className="w-4 h-4 text-[#C4A882] mt-0.5 shrink-0" />

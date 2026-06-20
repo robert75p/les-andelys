@@ -2,16 +2,21 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ChevronLeft } from 'lucide-react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useLanguage } from '@/lib/LanguageContext'
 import { locales } from '@/lib/i18n'
 import clsx from 'clsx'
 
 export default function Navbar() {
   const { t, locale, setLocale } = useLanguage()
+  const pathname = usePathname()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
+
+  const isHome = pathname === '/'
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -41,7 +46,7 @@ export default function Navbar() {
       >
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24 h-16 flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-baseline gap-2">
+          <Link href="/" className="flex items-baseline gap-2">
             <span
               className={clsx(
                 'font-cormorant italic text-xl leading-none transition-colors',
@@ -58,11 +63,26 @@ export default function Navbar() {
             >
               Immobilier
             </span>
-          </a>
+          </Link>
 
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {/* Back to listings on property pages */}
+            {!isHome && (
+              <Link
+                href="/"
+                className={clsx(
+                  'flex items-center gap-1 font-dm text-sm transition-colors hover:opacity-70',
+                  scrolled ? 'text-stone-500' : 'text-white/70'
+                )}
+              >
+                <ChevronLeft className="w-4 h-4" />
+                {t.nav.allProperties}
+              </Link>
+            )}
+
+            {/* Section links on property pages */}
+            {!isHome && navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -115,17 +135,19 @@ export default function Navbar() {
               </AnimatePresence>
             </div>
 
-            <a
-              href="#contact"
-              className={clsx(
-                'font-dm text-sm px-5 py-2 border rounded-full transition-all duration-300',
-                scrolled
-                  ? 'border-[#C4A882] text-[#C4A882] hover:bg-[#C4A882] hover:text-white'
-                  : 'border-white text-white hover:bg-white hover:text-stone-900'
-              )}
-            >
-              {t.nav.cta}
-            </a>
+            {!isHome && (
+              <a
+                href="#contact"
+                className={clsx(
+                  'font-dm text-sm px-5 py-2 border rounded-full transition-all duration-300',
+                  scrolled
+                    ? 'border-[#C4A882] text-[#C4A882] hover:bg-[#C4A882] hover:text-white'
+                    : 'border-white text-white hover:bg-white hover:text-stone-900'
+                )}
+              >
+                {t.nav.cta}
+              </a>
+            )}
           </div>
 
           {/* Mobile hamburger */}
@@ -155,7 +177,17 @@ export default function Navbar() {
               </button>
             </div>
             <div className="flex-1 flex flex-col justify-center items-center gap-8 px-6">
-              {navLinks.map((link, i) => (
+              {!isHome && (
+                <Link
+                  href="/"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center gap-1 font-dm text-sm text-white/60"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                  {t.nav.allProperties}
+                </Link>
+              )}
+              {!isHome && navLinks.map((link, i) => (
                 <motion.a
                   key={link.href}
                   href={link.href}
@@ -168,13 +200,18 @@ export default function Navbar() {
                   {link.label}
                 </motion.a>
               ))}
-              <a
-                href="#contact"
-                onClick={() => setMobileOpen(false)}
-                className="mt-4 font-dm text-sm px-8 py-3 border border-[#C4A882] text-[#C4A882] rounded-full"
-              >
-                {t.nav.cta}
-              </a>
+              {isHome && (
+                <p className="font-cormorant italic text-2xl text-white/60">{t.nav.allProperties}</p>
+              )}
+              {!isHome && (
+                <a
+                  href="#contact"
+                  onClick={() => setMobileOpen(false)}
+                  className="mt-4 font-dm text-sm px-8 py-3 border border-[#C4A882] text-[#C4A882] rounded-full"
+                >
+                  {t.nav.cta}
+                </a>
+              )}
               {/* Mobile language switcher */}
               <div className="flex gap-4 mt-4">
                 {locales.map((l) => (

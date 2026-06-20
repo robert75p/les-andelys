@@ -7,10 +7,9 @@ import { useLanguage } from '@/lib/LanguageContext'
 import FadeInView from '@/components/ui/FadeInView'
 import SectionLabel from '@/components/ui/SectionLabel'
 import clsx from 'clsx'
+import type { PropertyLocationData, LocationTabKey } from '@/lib/propertyTypes'
 
-type TabKey = 'restaurants' | 'marche' | 'culture' | 'shopping' | 'quartier'
-
-const tabImages: Record<TabKey, { src: string; caption: string }[]> = {
+const defaultTabImages: Record<LocationTabKey, { src: string; caption: string }[]> = {
   restaurants: [
     { src: '/pictures/Les-Andelys/resto.avif', caption: 'Le Relais de la Seine' },
     { src: '/pictures/Les-Andelys/resto2.jpg', caption: 'Bistrot du Château' },
@@ -52,14 +51,31 @@ const tabImages: Record<TabKey, { src: string; caption: string }[]> = {
   ],
 }
 
-export default function Location() {
+const defaultTabKeys: LocationTabKey[] = ['restaurants', 'marche', 'culture', 'shopping', 'quartier']
+
+const defaultMapSrc =
+  'https://www.openstreetmap.org/export/embed.html?bbox=1.378%2C49.217%2C1.458%2C49.277&amp;layer=mapnik&amp;marker=49.24694%2C1.41800'
+
+export default function Location({ data }: { data?: PropertyLocationData }) {
   const { t } = useLanguage()
-  const [activeTab, setActiveTab] = useState<TabKey>('restaurants')
+  const tabKeys = (data?.tabKeys ?? defaultTabKeys) as LocationTabKey[]
+  const [activeTab, setActiveTab] = useState<LocationTabKey>(tabKeys[0])
   const bannerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ target: bannerRef, offset: ['start end', 'end start'] })
   const y = useTransform(scrollYProgress, [0, 1], ['-15%', '15%'])
 
-  const tabKeys: TabKey[] = ['restaurants', 'marche', 'culture', 'shopping', 'quartier']
+  const bannerImage = data?.bannerImage ?? '/pictures/Les-Andelys/chateau.jpg'
+  const bannerLabel = data?.bannerLabel ?? 'Les Andelys, Normandie'
+  const title = data?.title ?? t.location.title
+  const description = data?.description ?? t.location.description
+  const mapSrc = data?.mapSrc ?? defaultMapSrc
+  const mapLabel = data?.mapLabel ?? t.location.mapLabel
+
+  const mergedTabImages: Record<LocationTabKey, { src: string; caption: string }[]> = {
+    ...defaultTabImages,
+    ...data?.tabImages,
+  }
+  const currentImages = mergedTabImages[activeTab] ?? []
 
   return (
     <section id="location" className="bg-white">
@@ -67,8 +83,8 @@ export default function Location() {
       <div ref={bannerRef} className="relative h-[40vh] overflow-hidden">
         <motion.div className="absolute inset-0 will-change-transform" style={{ y }}>
           <Image
-            src="/pictures/Les-Andelys/chateau.jpg"
-            alt="Vue aérienne du Château Gaillard et de la Seine à Les Andelys"
+            src={bannerImage}
+            alt={bannerLabel}
             fill
             className="object-cover"
             sizes="100vw"
@@ -77,7 +93,7 @@ export default function Location() {
         <div className="absolute inset-0 bg-black/25" />
         <div className="absolute inset-0 flex items-end pb-10 px-6 md:px-12 lg:px-24 max-w-[1440px] mx-auto left-0 right-0">
           <p className="font-cormorant italic text-white text-2xl md:text-3xl opacity-90">
-            Les Andelys, Normandie
+            {bannerLabel}
           </p>
         </div>
       </div>
@@ -87,12 +103,12 @@ export default function Location() {
           <FadeInView>
             <SectionLabel>{t.location.label}</SectionLabel>
             <h2 className="font-cormorant italic text-[clamp(2rem,4vw,3.5rem)] text-stone-900 leading-[1.1] mb-6">
-              {t.location.title}
+              {title}
             </h2>
           </FadeInView>
           <FadeInView delay={0.1} className="flex items-center">
             <p className="font-dm text-stone-600 leading-relaxed text-sm md:text-base">
-              {t.location.description}
+              {description}
             </p>
           </FadeInView>
         </div>
@@ -120,7 +136,7 @@ export default function Location() {
         {/* Carousel */}
         <FadeInView>
           <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
-            {tabImages[activeTab].map((img) => (
+            {currentImages.map((img) => (
               <div
                 key={img.src}
                 className="relative flex-none w-64 md:w-80 aspect-[3/4] rounded-sm overflow-hidden snap-start group"
@@ -146,14 +162,14 @@ export default function Location() {
         <FadeInView delay={0.2} className="mt-16">
           <div className="w-full h-80 rounded-sm overflow-hidden border border-stone-200">
             <iframe
-              title={t.location.mapLabel}
-              src="https://www.openstreetmap.org/export/embed.html?bbox=1.378%2C49.217%2C1.458%2C49.277&amp;layer=mapnik&amp;marker=49.24694%2C1.41800"
+              title={mapLabel}
+              src={mapSrc}
               className="w-full h-full"
               loading="lazy"
             />
           </div>
           <p className="font-dm text-xs text-stone-400 mt-2 text-center tracking-wide">
-            {t.location.mapLabel}
+            {mapLabel}
           </p>
         </FadeInView>
       </div>

@@ -11,11 +11,12 @@ export const locales: { code: Locale; label: string; flag: string }[] = [
 export const translations = {
   fr: {
     nav: {
-      property: 'Les Andelys',
+      property: 'Propriété',
       location: 'Localisation',
       gallery: 'Galerie',
       contact: 'Contact',
       cta: 'Prendre RDV',
+      allProperties: 'Nos Propriétés',
     },
     hero: {
       region: 'NORMANDIE · FRANCE',
@@ -135,7 +136,7 @@ export const translations = {
         submit: 'Envoyer ma demande',
       },
       agent: {
-        name: 'Michel G. (le propriétaire)',
+        name: 'Michel G.',
         title: 'Propriétaire',
         email: 'contact@adresse-privee.fr',
       },
@@ -149,11 +150,12 @@ export const translations = {
   },
   en: {
     nav: {
-      property: 'Les Andelys',
+      property: 'Property',
       location: 'Location',
       gallery: 'Gallery',
       contact: 'Contact',
       cta: 'Book a Visit',
+      allProperties: 'Our Properties',
     },
     hero: {
       region: 'NORMANDY · FRANCE',
@@ -273,7 +275,7 @@ export const translations = {
         submit: 'Send my enquiry',
       },
       agent: {
-        name: 'Michel G. (the owner)',
+        name: 'Michel G.',
         title: 'Owner',
         email: 'contact@adresse-privee.fr',
       },
@@ -287,11 +289,12 @@ export const translations = {
   },
   de: {
     nav: {
-      property: 'Les Andelys',
+      property: 'Immobilie',
       location: 'Lage',
       gallery: 'Galerie',
       contact: 'Kontakt',
       cta: 'Besichtigung buchen',
+      allProperties: 'Unsere Immobilien',
     },
     hero: {
       region: 'NORMANDIE · FRANKREICH',
@@ -411,7 +414,7 @@ export const translations = {
         submit: 'Anfrage senden',
       },
       agent: {
-        name: 'Michel G. (der Eigentümer)',
+        name: 'Michel G.',
         title: 'Eigentümer',
         email: 'contact@adresse-privee.fr',
       },
@@ -425,11 +428,12 @@ export const translations = {
   },
   it: {
     nav: {
-      property: 'Les Andelys',
+      property: 'Proprietà',
       location: 'Posizione',
       gallery: 'Galleria',
       contact: 'Contatto',
       cta: 'Prenota visita',
+      allProperties: 'Le Nostre Proprietà',
     },
     hero: {
       region: 'NORMANDIA · FRANCIA',
@@ -549,7 +553,7 @@ export const translations = {
         submit: 'Invia la mia richiesta',
       },
       agent: {
-        name: 'Michel G. (il proprietario)',
+        name: 'Michel G.',
         title: 'Proprietario',
         email: 'contact@adresse-privee.fr',
       },
@@ -563,11 +567,12 @@ export const translations = {
   },
   zh: {
     nav: {
-      property: 'Les Andelys',
+      property: '房产',
       location: '位置',
       gallery: '画廊',
       contact: '联系',
       cta: '预约参观',
+      allProperties: '所有房产',
     },
     hero: {
       region: '诺曼底 · 法国',

@@ -6,11 +6,14 @@ import { Mail, User } from 'lucide-react'
 import { useLanguage } from '@/lib/LanguageContext'
 import FadeInView from '@/components/ui/FadeInView'
 import SectionLabel from '@/components/ui/SectionLabel'
+import type { PropertyContactData } from '@/lib/propertyTypes'
 
-export default function Contact() {
+export default function Contact({ data }: { data?: PropertyContactData }) {
   const { t } = useLanguage()
   const f = t.contact.fields
-  const agent = t.contact.agent
+
+  const backgroundImage = data?.backgroundImage ?? '/pictures/house/loft-entrance.jpeg'
+  const agent = data?.agent ?? t.contact.agent
 
   const [form, setForm] = useState({
     name: '', email: '', phone: '', message: '', consent: false,
@@ -30,8 +33,8 @@ export default function Contact() {
           <FadeInView direction="left" className="relative hidden lg:block">
             <div className="relative w-full h-full min-h-[600px] rounded-sm overflow-hidden">
               <Image
-                src="/pictures/house/loft-entrance.jpeg"
-                alt="Loft des Andelys — entrée et salon"
+                src={backgroundImage}
+                alt="Adresse Privée — contact"
                 fill
                 className="object-cover"
                 sizes="50vw"

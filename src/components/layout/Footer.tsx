@@ -1,17 +1,26 @@
 'use client'
 
 import { Share2, Globe, Briefcase } from 'lucide-react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useLanguage } from '@/lib/LanguageContext'
 
 export default function Footer() {
   const { t } = useLanguage()
+  const pathname = usePathname()
+  const isHome = pathname === '/'
 
-  const navLinks = [
-    { href: '#property', label: t.nav.property },
-    { href: '#location', label: t.nav.location },
-    { href: '#gallery', label: t.nav.gallery },
-    { href: '#contact', label: t.nav.contact },
-  ]
+  const propertyLinks = isHome
+    ? [
+        { href: '/les-andelys', label: 'Loft des Andelys' },
+        { href: '/paris-15e', label: 'Appartement Paris 15e' },
+      ]
+    : [
+        { href: '#property', label: t.nav.property },
+        { href: '#location', label: t.nav.location },
+        { href: '#gallery', label: t.nav.gallery },
+        { href: '#contact', label: t.nav.contact },
+      ]
 
   return (
     <footer className="bg-[#1A1815] text-white">
@@ -30,14 +39,24 @@ export default function Footer() {
 
           {/* Nav */}
           <div className="flex flex-col gap-3">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="font-dm text-sm text-white/60 hover:text-white transition-colors w-fit"
-              >
-                {link.label}
-              </a>
+            {propertyLinks.map((link) => (
+              link.href.startsWith('#') ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="font-dm text-sm text-white/60 hover:text-white transition-colors w-fit"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="font-dm text-sm text-white/60 hover:text-white transition-colors w-fit"
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </div>
 
