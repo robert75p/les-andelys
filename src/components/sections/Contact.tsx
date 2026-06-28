@@ -10,27 +10,19 @@ import type { PropertyContactData } from '@/lib/propertyTypes'
 
 type SubmitState = 'idle' | 'submitting' | 'submitted' | 'error'
 
-// MyMemory locale → API language code
-const LOCALE_TO_LANG: Record<string, string> = {
-  en: 'en',
-  de: 'de',
-  it: 'it',
-  zh: 'zh-CN',
-}
-
-async function translateToFrench(text: string, fromLocale: string): Promise<string | null> {
-  const langCode = LOCALE_TO_LANG[fromLocale]
-  if (!langCode || !text.trim()) return null
+async function translateToFrench(text: string): Promise<string | null> {
+  if (!text.trim()) return null
   try {
     const res = await fetch(
-      `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${langCode}|fr`
+      `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=autodetect|fr`
     )
     const data = await res.json() as {
       responseData?: { translatedText?: string }
       responseStatus?: number
     }
     const translated = data?.responseData?.translatedText
-    if (data?.responseStatus === 200 && translated && translated !== text) {
+    // Only include translation if it actually differs from the original (i.e. wasn't already French)
+    if (data?.responseStatus === 200 && translated && translated.trim() !== text.trim()) {
       return translated
     }
     return null
@@ -40,7 +32,7 @@ async function translateToFrench(text: string, fromLocale: string): Promise<stri
 }
 
 export default function Contact({ data }: { data?: PropertyContactData }) {
-  const { t, locale } = useLanguage()
+  const { t } = useLanguage()
   const f = t.contact.fields
 
   const backgroundImage = data?.backgroundImage ?? '/pictures/house/loft-entrance.jpeg'
@@ -56,15 +48,14 @@ export default function Contact({ data }: { data?: PropertyContactData }) {
 
     setSubmitState('submitting')
 
-    // Build message — include French translation when user writes in another language
+    // Always attempt translation — auto-detect source language from message content,
+    // regardless of which UI language the user has selected
     let composedMessage = form.message
-    if (locale !== 'fr') {
-      const translation = await translateToFrench(form.message, locale)
-      if (translation) {
-        composedMessage =
-          `Message original :\n${form.message}\n\n` +
-          `─── Traduction française ───\n${translation}`
-      }
+    const translation = await translateToFrench(form.message)
+    if (translation) {
+      composedMessage =
+        `Message original :\n${form.message}\n\n` +
+        `─── Traduction française ───\n${translation}`
     }
 
     if (formEndpoint) {
