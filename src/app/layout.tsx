@@ -19,9 +19,18 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Adresse Privée Immobilier",
+  metadataBase: new URL('https://adresse-privee.fr'),
+  title: {
+    default: "Adresse Privée Immobilier — Biens d'Exception en Vente Exclusive",
+    template: "%s | Adresse Privée Immobilier",
+  },
   description:
-    "Adresse Privée Immobilier — propriétés d'exception en vente exclusive.",
+    "Sélection exclusive de propriétés d'exception à vendre en France — loft 147 m² à Les Andelys (27700), Normandie et appartement 2 pièces à Paris 15e (75015). Adresse Privée Immobilier.",
+  openGraph: {
+    siteName: 'Adresse Privée Immobilier',
+    locale: 'fr_FR',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({

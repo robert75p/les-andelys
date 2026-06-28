@@ -28,7 +28,7 @@ export const translations = {
       label: "L'Essentiel",
       title: "Une demeure d'exception",
       description:
-        "Une conversion architecturale rare au cœur des Andelys — un loft exceptionnel baigné de lumière naturelle avec des poutres en chêne apparentes, des plafonds voûtés à 6 m de hauteur, et une fusion harmonieuse du caractère historique et du design contemporain. À quelques minutes du légendaire Château Gaillard et des rives de la Seine.",
+        "À vendre à Les Andelys (27700), Normandie — une conversion architecturale rare en loft exceptionnel de 147 m², baigné de lumière naturelle avec des poutres en chêne apparentes, des plafonds voûtés à 6 m de hauteur, et une fusion harmonieuse du caractère historique et du design contemporain. À deux minutes du légendaire Château Gaillard de Richard Cœur de Lion et des rives de la Seine.",
       features: [
         "Charpente en chêne apparente, plafonds voûtés à 6 m",
         "Velux en toiture pour une lumière naturelle abondante",
@@ -163,7 +163,7 @@ export const translations = {
       },
       overview: {
         title: 'Un appartement lumineux au cœur du 15e',
-        description: "À quelques pas de la Rue de la Convention, et des transports, au coeur du 15e arrondissement, découvrez ce bel appartement 2 pièces de 42 m², situé au RDC d'une copropriété propre et bien entretenue, ravalée avec ascenseur et gardien. Entièrement rénové avec des prestations de qualité, il propose un espace de vie lumineux ouvrant sur une cour intérieure, une cuisine fonctionnelle, 1 chambre lumineuse ainsi qu'un agencement optimisé. Son environnement calme, sa luminosité et sa vue dégagée offrent un cadre de vie particulièrement agréable. À proximité immédiate des commerces et des établissements scolaires, ainsi que du métro Convention / Vaugirard.",
+        description: "À quelques pas de la Rue de la Convention et des transports, dans le 15e arrondissement de Paris (75015), découvrez ce bel appartement 2 pièces de 42 m² à vendre, situé au RDC d'une copropriété propre et bien entretenue avec ascenseur et gardien. Entièrement rénové avec des prestations de qualité, il propose un séjour lumineux ouvrant sur une cour intérieure calme, une cuisine fonctionnelle, 1 chambre lumineuse ainsi qu'un agencement optimisé. À proximité de la Rue du Commerce, du centre Beaugrenelle et des métros Convention / Vaugirard.",
         features: [
           'Appartement entièrement rénové avec finitions soignées',
           'Séjour lumineux ouvrant sur cour intérieure calme',
@@ -218,7 +218,7 @@ export const translations = {
       label: 'The Essentials',
       title: 'An exceptional residence',
       description:
-        'A rare architectural conversion nestled in the heart of Les Andelys — an exceptional loft bathed in natural light with exposed oak beams, soaring 6m vaulted ceilings, and a seamless fusion of historic character and contemporary design. Set just minutes from the legendary Château Gaillard and the banks of the Seine.',
+        'For sale in Les Andelys (27700), Normandy, France — a rare architectural conversion into an exceptional 147 m² loft, bathed in natural light with exposed oak beams, soaring 6m vaulted ceilings, and a seamless fusion of historic character and contemporary design. Set just minutes from the legendary Château Gaillard of Richard the Lionheart and the banks of the Seine.',
       features: [
         'Exposed oak beam structure with 6m vaulted ceilings',
         'Roof skylights flooding every room with natural light',
