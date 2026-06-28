@@ -38,6 +38,7 @@ export default function Contact({ data }: { data?: PropertyContactData }) {
   const backgroundImage = data?.backgroundImage ?? '/pictures/house/loft-entrance.jpeg'
   const agent = data?.agent ?? t.contact.agent
   const formEndpoint = data?.formEndpoint
+  const propertyLabel = data?.propertyLabel
 
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '', consent: false })
   const [submitState, setSubmitState] = useState<SubmitState>('idle')
@@ -64,6 +65,10 @@ export default function Contact({ data }: { data?: PropertyContactData }) {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
           body: JSON.stringify({
+            ...(propertyLabel && {
+              _subject: `Demande de contact — ${propertyLabel}`,
+              propriete: propertyLabel,
+            }),
             name: form.name,
             email: form.email,
             phone: form.phone || undefined,
