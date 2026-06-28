@@ -92,15 +92,15 @@ export default function Paris15eContent() {
     description: p.overview.description,
     features: [...p.overview.features],
     stats: [
-      { value: '38 m²', label: t.overview.stats.sizeLabel },
+      { value: '42 m²', label: t.overview.stats.sizeLabel },
       { value: '2', label: roomsLabel },
       { value: '1', label: t.overview.stats.bathroomsLabel },
       { value: '1', label: p.overview.caveLabel },
     ],
-    price: '€445 000',
+    price: '€500 000',
     mainImage: '/pictures/Paris-15e/living-1.jpeg',
     floatingLabel: 'Paris 15e',
-    floatingSize: '38 m²',
+    floatingSize: '42 m²',
     floatingBedrooms: p.overview.floatingBedrooms,
   }
 

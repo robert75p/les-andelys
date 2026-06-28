@@ -155,11 +155,11 @@ export const translations = {
       hero: {
         region: 'PARIS 15e · ÎLE-DE-FRANCE',
         title: 'Appartement Paris 15e',
-        subtitle: '38 m² · 2 pièces · RDC · €445 000',
+        subtitle: '42 m² · 2 pièces · RDC · €500 000',
       },
       overview: {
         title: 'Un appartement lumineux au cœur du 15e',
-        description: "À quelques pas de la Rue de la Convention, et des transports, au coeur du 15e arrondissement, découvrez ce bel appartement 2 pièces de 38 m², situé au RDC d'une copropriété propre et bien entretenue, ravalée avec ascenseur et gardien. Entièrement rénové avec des prestations de qualité, il propose un espace de vie lumineux ouvrant sur une cour intérieure, une cuisine fonctionnelle, 1 chambre lumineuse ainsi qu'un agencement optimisé. Son environnement calme, sa luminosité et sa vue dégagée offrent un cadre de vie particulièrement agréable. À proximité immédiate des commerces et des établissements scolaires, ainsi que du métro Convention / Vaugirard.",
+        description: "À quelques pas de la Rue de la Convention, et des transports, au coeur du 15e arrondissement, découvrez ce bel appartement 2 pièces de 42 m², situé au RDC d'une copropriété propre et bien entretenue, ravalée avec ascenseur et gardien. Entièrement rénové avec des prestations de qualité, il propose un espace de vie lumineux ouvrant sur une cour intérieure, une cuisine fonctionnelle, 1 chambre lumineuse ainsi qu'un agencement optimisé. Son environnement calme, sa luminosité et sa vue dégagée offrent un cadre de vie particulièrement agréable. À proximité immédiate des commerces et des établissements scolaires, ainsi que du métro Convention / Vaugirard.",
         features: [
           'Appartement entièrement rénové avec finitions soignées',
           'Séjour lumineux ouvrant sur cour intérieure calme',
@@ -341,11 +341,11 @@ export const translations = {
       hero: {
         region: 'PARIS 15th · ÎLE-DE-FRANCE',
         title: 'Paris 15th Apartment',
-        subtitle: '38 m² · 2 rooms · Ground floor · €445,000',
+        subtitle: '42 m² · 2 rooms · Ground floor · €500,000',
       },
       overview: {
         title: 'A bright apartment in the heart of the 15th',
-        description: 'A few steps from Rue de la Convention and transport links, in the heart of the 15th arrondissement, discover this beautiful 2-room, 38 m² apartment on the ground floor of a well-maintained building with lift and concierge. Fully renovated with quality fittings, it offers a bright living space opening onto a quiet inner courtyard, a functional kitchen, 1 bright bedroom and an optimised layout. Its calm environment, natural light and open views offer a particularly pleasant living experience. Within immediate reach of shops, schools, and the Convention / Vaugirard metro.',
+        description: 'A few steps from Rue de la Convention and transport links, in the heart of the 15th arrondissement, discover this beautiful 2-room, 42 m² apartment on the ground floor of a well-maintained building with lift and concierge. Fully renovated with quality fittings, it offers a bright living space opening onto a quiet inner courtyard, a functional kitchen, 1 bright bedroom and an optimised layout. Its calm environment, natural light and open views offer a particularly pleasant living experience. Within immediate reach of shops, schools, and the Convention / Vaugirard metro.',
         features: [
           'Fully renovated apartment with quality finishes',
           'Bright living room opening onto a quiet inner courtyard',
@@ -527,11 +527,11 @@ export const translations = {
       hero: {
         region: 'PARIS 15. · ÎLE-DE-FRANCE',
         title: 'Apartment Paris 15.',
-        subtitle: '38 m² · 2 Zimmer · EG · €445.000',
+        subtitle: '42 m² · 2 Zimmer · EG · €500.000',
       },
       overview: {
         title: 'Eine lichtdurchflutete Wohnung im Herzen des 15.',
-        description: 'Nur wenige Schritte von der Rue de la Convention und den Verkehrsanbindungen entfernt, im Herzen des 15. Arrondissements, entdecken Sie diese schöne 2-Zimmer-Wohnung von 38 m², im Erdgeschoss eines gepflegten Gebäudes mit Aufzug und Hausmeister. Vollständig renoviert mit hochwertiger Ausstattung, bietet sie einen hellen Wohnbereich mit Blick auf einen ruhigen Innenhof, eine funktionale Küche, 1 helles Schlafzimmer sowie eine optimierte Raumaufteilung. In unmittelbarer Nähe von Geschäften, Schulen und der Metro Convention / Vaugirard.',
+        description: 'Nur wenige Schritte von der Rue de la Convention und den Verkehrsanbindungen entfernt, im Herzen des 15. Arrondissements, entdecken Sie diese schöne 2-Zimmer-Wohnung von 42 m², im Erdgeschoss eines gepflegten Gebäudes mit Aufzug und Hausmeister. Vollständig renoviert mit hochwertiger Ausstattung, bietet sie einen hellen Wohnbereich mit Blick auf einen ruhigen Innenhof, eine funktionale Küche, 1 helles Schlafzimmer sowie eine optimierte Raumaufteilung. In unmittelbarer Nähe von Geschäften, Schulen und der Metro Convention / Vaugirard.',
         features: [
           'Vollständig renovierte Wohnung mit hochwertigen Oberflächen',
           'Helles Wohnzimmer mit Blick auf ruhigen Innenhof',
@@ -713,11 +713,11 @@ export const translations = {
       hero: {
         region: 'PARIGI 15° · ÎLE-DE-FRANCE',
         title: 'Appartamento Parigi 15°',
-        subtitle: '38 m² · 2 locali · PT · €445.000',
+        subtitle: '42 m² · 2 locali · PT · €500.000',
       },
       overview: {
         title: 'Un appartamento luminoso nel cuore del 15°',
-        description: "A pochi passi da Rue de la Convention e dai trasporti, nel cuore del 15° arrondissement, scoprite questo bel bilocale di 38 m², situato al piano terra di una copropietà pulita e ben tenuta, con ascensore e portiere. Completamente ristrutturato con finiture di qualità, offre uno spazio living luminoso che si apre su un cortile interno tranquillo, una cucina funzionale, 1 camera luminosa e una disposizione ottimizzata. Il suo ambiente tranquillo, la luminosità e la vista libera offrono una qualità di vita particolarmente piacevole. Vicinissimo a negozi, scuole e alle fermate metro Convention / Vaugirard.",
+        description: "A pochi passi da Rue de la Convention e dai trasporti, nel cuore del 15° arrondissement, scoprite questo bel bilocale di 42 m², situato al piano terra di una copropietà pulita e ben tenuta, con ascensore e portiere. Completamente ristrutturato con finiture di qualità, offre uno spazio living luminoso che si apre su un cortile interno tranquillo, una cucina funzionale, 1 camera luminosa e una disposizione ottimizzata. Il suo ambiente tranquillo, la luminosità e la vista libera offrono una qualità di vita particolarmente piacevole. Vicinissimo a negozi, scuole e alle fermate metro Convention / Vaugirard.",
         features: [
           'Appartamento completamente ristrutturato con finiture curate',
           'Soggiorno luminoso che si apre su un cortile interno tranquillo',
@@ -899,11 +899,11 @@ export const translations = {
       hero: {
         region: '巴黎15区 · 法兰西岛',
         title: '巴黎15区公寓',
-        subtitle: '38平方米 · 2室 · 底层 · €445,000',
+        subtitle: '42平方米 · 2室 · 底层 · €500,000',
       },
       overview: {
         title: '15区心脏地带的明亮公寓',
-        description: '距Convention街和交通枢纽仅数步之遥，位于15区核心地带，这套38平米的两居室公寓坐落于配备电梯和管理员的整洁公寓楼底层。经过全面翻修，配备优质设施，公寓提供明亮的生活空间，可俯瞰宁静的内院，配有实用厨房和1间明亮卧室，布局合理。宁静的环境、充足的采光和开阔的视野营造出极为宜居的生活氛围。紧邻商店、学校以及Convention/Vaugirard地铁站。',
+        description: '距Convention街和交通枢纽仅数步之遥，位于15区核心地带，这套42平米的两居室公寓坐落于配备电梯和管理员的整洁公寓楼底层。经过全面翻修，配备优质设施，公寓提供明亮的生活空间，可俯瞰宁静的内院，配有实用厨房和1间明亮卧室，布局合理。宁静的环境、充足的采光和开阔的视野营造出极为宜居的生活氛围。紧邻商店、学校以及Convention/Vaugirard地铁站。',
         features: [
           '公寓经过全面翻修，装修精良',
           '明亮客厅，朝向宁静内院',
