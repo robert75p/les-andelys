@@ -72,7 +72,7 @@ const CONTACT_DATA: PropertyContactData = {
   backgroundImage: '/pictures/Paris-15e/courtyard-2.jpeg',
   agent: { name: 'Annie S.', title: 'Propriétaire', email: 'annie-s@adresse-privee.fr' },
   // Formspree endpoint — replace YOUR_FORM_ID after creating a form at formspree.io
-  formEndpoint: 'https://formspree.io/f/YOUR_FORM_ID',
+  formEndpoint: 'https://formspree.io/f/xaqgjpod',
 }
 
 export default function Paris15eContent() {
