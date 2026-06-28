@@ -2,11 +2,13 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { Mail, User } from 'lucide-react'
+import { Mail, User, CheckCircle } from 'lucide-react'
 import { useLanguage } from '@/lib/LanguageContext'
 import FadeInView from '@/components/ui/FadeInView'
 import SectionLabel from '@/components/ui/SectionLabel'
 import type { PropertyContactData } from '@/lib/propertyTypes'
+
+type SubmitState = 'idle' | 'submitting' | 'submitted' | 'error'
 
 export default function Contact({ data }: { data?: PropertyContactData }) {
   const { t } = useLanguage()
@@ -14,16 +16,47 @@ export default function Contact({ data }: { data?: PropertyContactData }) {
 
   const backgroundImage = data?.backgroundImage ?? '/pictures/house/loft-entrance.jpeg'
   const agent = data?.agent ?? t.contact.agent
+  const formEndpoint = data?.formEndpoint
 
-  const [form, setForm] = useState({
-    name: '', email: '', phone: '', message: '', consent: false,
-  })
-  const [sent, setSent] = useState(false)
+  const [form, setForm] = useState({ name: '', email: '', phone: '', message: '', consent: false })
+  const [submitState, setSubmitState] = useState<SubmitState>('idle')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSent(true)
+    if (submitState === 'submitted') return
+
+    setSubmitState('submitting')
+
+    if (formEndpoint) {
+      try {
+        const res = await fetch(formEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({
+            name: form.name,
+            email: form.email,
+            phone: form.phone || undefined,
+            message: form.message,
+          }),
+        })
+        if (res.ok) {
+          setSubmitState('submitted')
+        } else {
+          setSubmitState('error')
+        }
+      } catch {
+        setSubmitState('error')
+      }
+    } else {
+      // No endpoint configured — simulate success (e.g. Les Andelys)
+      setSubmitState('submitted')
+    }
   }
+
+  const buttonLabel =
+    submitState === 'submitting' ? f.submitting :
+    submitState === 'submitted' ? f.submitted :
+    f.submit
 
   return (
     <section id="contact" className="bg-[#FAF8F4] py-24 lg:py-32">
@@ -49,79 +82,95 @@ export default function Contact({ data }: { data?: PropertyContactData }) {
               {t.contact.title}
             </p>
 
-            {sent ? (
-              <div className="bg-[#8A9E7A]/20 border border-[#8A9E7A]/30 rounded-sm p-8 text-center">
-                <p className="font-cormorant italic text-2xl text-stone-700">Merci !</p>
-                <p className="font-dm text-sm text-stone-500 mt-2">Votre demande a bien été envoyée.</p>
+            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+              {/* Name + Email */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div className="flex flex-col gap-1.5">
+                  <label className="font-dm text-xs uppercase tracking-widest text-stone-400">{f.name}</label>
+                  <input
+                    type="text"
+                    value={form.name}
+                    onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))}
+                    required
+                    disabled={submitState === 'submitted'}
+                    className="bg-white border border-stone-200 rounded-sm px-4 py-3 font-dm text-sm text-stone-800 focus:outline-none focus:border-[#C4A882] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                  />
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <label className="font-dm text-xs uppercase tracking-widest text-stone-400">{f.email}</label>
+                  <input
+                    type="email"
+                    value={form.email}
+                    onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))}
+                    required
+                    disabled={submitState === 'submitted'}
+                    className="bg-white border border-stone-200 rounded-sm px-4 py-3 font-dm text-sm text-stone-800 focus:outline-none focus:border-[#C4A882] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                  />
+                </div>
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-                {/* Name + Email */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div className="flex flex-col gap-1.5">
-                    <label className="font-dm text-xs uppercase tracking-widest text-stone-400">{f.name}</label>
-                    <input
-                      type="text"
-                      value={form.name}
-                      onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))}
-                      required
-                      className="bg-white border border-stone-200 rounded-sm px-4 py-3 font-dm text-sm text-stone-800 focus:outline-none focus:border-[#C4A882] transition-colors"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-1.5">
-                    <label className="font-dm text-xs uppercase tracking-widest text-stone-400">{f.email}</label>
-                    <input
-                      type="email"
-                      value={form.email}
-                      onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))}
-                      required
-                      className="bg-white border border-stone-200 rounded-sm px-4 py-3 font-dm text-sm text-stone-800 focus:outline-none focus:border-[#C4A882] transition-colors"
-                    />
-                  </div>
+
+              {/* Phone */}
+              <div className="flex flex-col gap-1.5">
+                <label className="font-dm text-xs uppercase tracking-widest text-stone-400">{f.phone}</label>
+                <input
+                  type="tel"
+                  value={form.phone}
+                  onChange={(e) => setForm((p) => ({ ...p, phone: e.target.value }))}
+                  disabled={submitState === 'submitted'}
+                  className="bg-white border border-stone-200 rounded-sm px-4 py-3 font-dm text-sm text-stone-800 focus:outline-none focus:border-[#C4A882] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                />
+              </div>
+
+              {/* Message */}
+              <div className="flex flex-col gap-1.5">
+                <label className="font-dm text-xs uppercase tracking-widest text-stone-400">{f.message}</label>
+                <textarea
+                  rows={5}
+                  value={form.message}
+                  onChange={(e) => setForm((p) => ({ ...p, message: e.target.value }))}
+                  placeholder={f.messagePlaceholder}
+                  disabled={submitState === 'submitted'}
+                  className="bg-white border border-stone-200 rounded-sm px-4 py-3 font-dm text-sm text-stone-800 focus:outline-none focus:border-[#C4A882] transition-colors resize-none disabled:opacity-60 disabled:cursor-not-allowed"
+                />
+              </div>
+
+              {/* Consent */}
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={form.consent}
+                  onChange={(e) => setForm((p) => ({ ...p, consent: e.target.checked }))}
+                  disabled={submitState === 'submitted'}
+                  className="mt-0.5 w-4 h-4 accent-[#C4A882]"
+                />
+                <span className="font-dm text-xs text-stone-500">{f.consent}</span>
+              </label>
+
+              {/* Error message */}
+              {submitState === 'error' && (
+                <p className="font-dm text-xs text-red-600 bg-red-50 border border-red-200 rounded-sm px-4 py-3">
+                  {f.errorMessage}
+                </p>
+              )}
+
+              {/* Success confirmation */}
+              {submitState === 'submitted' && (
+                <div className="flex items-start gap-3 bg-[#8A9E7A]/15 border border-[#8A9E7A]/30 rounded-sm px-4 py-3">
+                  <CheckCircle className="w-4 h-4 text-[#8A9E7A] shrink-0 mt-0.5" />
+                  <p className="font-dm text-sm text-stone-700">{f.successMessage}</p>
                 </div>
+              )}
 
-                {/* Phone */}
-                <div className="flex flex-col gap-1.5">
-                  <label className="font-dm text-xs uppercase tracking-widest text-stone-400">{f.phone}</label>
-                  <input
-                    type="tel"
-                    value={form.phone}
-                    onChange={(e) => setForm((p) => ({ ...p, phone: e.target.value }))}
-                    className="bg-white border border-stone-200 rounded-sm px-4 py-3 font-dm text-sm text-stone-800 focus:outline-none focus:border-[#C4A882] transition-colors"
-                  />
-                </div>
-
-                {/* Message */}
-                <div className="flex flex-col gap-1.5">
-                  <label className="font-dm text-xs uppercase tracking-widest text-stone-400">{f.message}</label>
-                  <textarea
-                    rows={5}
-                    value={form.message}
-                    onChange={(e) => setForm((p) => ({ ...p, message: e.target.value }))}
-                    placeholder={f.messagePlaceholder}
-                    className="bg-white border border-stone-200 rounded-sm px-4 py-3 font-dm text-sm text-stone-800 focus:outline-none focus:border-[#C4A882] transition-colors resize-none"
-                  />
-                </div>
-
-                {/* Consent */}
-                <label className="flex items-start gap-3 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    checked={form.consent}
-                    onChange={(e) => setForm((p) => ({ ...p, consent: e.target.checked }))}
-                    className="mt-0.5 w-4 h-4 accent-[#C4A882]"
-                  />
-                  <span className="font-dm text-xs text-stone-500">{f.consent}</span>
-                </label>
-
-                <button
-                  type="submit"
-                  className="w-full bg-[#C4A882] text-white font-dm text-sm py-4 rounded-sm hover:bg-[#b8956d] transition-colors duration-300"
-                >
-                  {f.submit}
-                </button>
-              </form>
-            )}
+              {/* Submit button */}
+              <button
+                type="submit"
+                disabled={submitState === 'submitting' || submitState === 'submitted'}
+                className="w-full flex items-center justify-center gap-2 bg-[#C4A882] text-white font-dm text-sm py-4 rounded-sm hover:bg-[#b8956d] transition-colors duration-300 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:bg-[#C4A882]"
+              >
+                {submitState === 'submitted' && <CheckCircle className="w-4 h-4" />}
+                {buttonLabel}
+              </button>
+            </form>
 
             {/* Agent card */}
             <div className="mt-8 flex items-center gap-4 p-5 bg-white border border-stone-200 rounded-sm">

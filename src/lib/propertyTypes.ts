@@ -45,4 +45,5 @@ export interface PropertyLocationData {
 export interface PropertyContactData {
   backgroundImage?: string
   agent?: { name: string; title: string; email: string }
+  formEndpoint?: string
 }
