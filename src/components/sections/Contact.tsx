@@ -10,8 +10,37 @@ import type { PropertyContactData } from '@/lib/propertyTypes'
 
 type SubmitState = 'idle' | 'submitting' | 'submitted' | 'error'
 
+// MyMemory locale → API language code
+const LOCALE_TO_LANG: Record<string, string> = {
+  en: 'en',
+  de: 'de',
+  it: 'it',
+  zh: 'zh-CN',
+}
+
+async function translateToFrench(text: string, fromLocale: string): Promise<string | null> {
+  const langCode = LOCALE_TO_LANG[fromLocale]
+  if (!langCode || !text.trim()) return null
+  try {
+    const res = await fetch(
+      `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${langCode}|fr`
+    )
+    const data = await res.json() as {
+      responseData?: { translatedText?: string }
+      responseStatus?: number
+    }
+    const translated = data?.responseData?.translatedText
+    if (data?.responseStatus === 200 && translated && translated !== text) {
+      return translated
+    }
+    return null
+  } catch {
+    return null
+  }
+}
+
 export default function Contact({ data }: { data?: PropertyContactData }) {
-  const { t } = useLanguage()
+  const { t, locale } = useLanguage()
   const f = t.contact.fields
 
   const backgroundImage = data?.backgroundImage ?? '/pictures/house/loft-entrance.jpeg'
@@ -27,6 +56,17 @@ export default function Contact({ data }: { data?: PropertyContactData }) {
 
     setSubmitState('submitting')
 
+    // Build message — include French translation when user writes in another language
+    let composedMessage = form.message
+    if (locale !== 'fr') {
+      const translation = await translateToFrench(form.message, locale)
+      if (translation) {
+        composedMessage =
+          `Message original :\n${form.message}\n\n` +
+          `─── Traduction française ───\n${translation}`
+      }
+    }
+
     if (formEndpoint) {
       try {
         const res = await fetch(formEndpoint, {
@@ -36,26 +76,22 @@ export default function Contact({ data }: { data?: PropertyContactData }) {
             name: form.name,
             email: form.email,
             phone: form.phone || undefined,
-            message: form.message,
+            message: composedMessage,
           }),
         })
-        if (res.ok) {
-          setSubmitState('submitted')
-        } else {
-          setSubmitState('error')
-        }
+        setSubmitState(res.ok ? 'submitted' : 'error')
       } catch {
         setSubmitState('error')
       }
     } else {
-      // No endpoint configured — simulate success (e.g. Les Andelys)
+      // No endpoint configured (e.g. Les Andelys) — simulate success
       setSubmitState('submitted')
     }
   }
 
   const buttonLabel =
     submitState === 'submitting' ? f.submitting :
-    submitState === 'submitted' ? f.submitted :
+    submitState === 'submitted'  ? f.submitted  :
     f.submit
 
   return (
