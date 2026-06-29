@@ -15,7 +15,7 @@ export default function HomePage() {
       slug: 'les-andelys',
       name: t.hero.title,
       location: 'Les Andelys, Normandie (27700)',
-      price: '€425 000',
+      price: '€450 000',
       size: t.overview.stats.size,
       rooms: t.overview.stats.bedrooms,
       roomsLabel: t.overview.stats.bedroomsLabel,

@@ -20,7 +20,7 @@ export default function PropertyOverview({ data }: { data?: PropertyOverviewData
     { value: s.bathrooms, label: s.bathroomsLabel },
     { value: s.terrace, label: s.terraceLabel },
   ]
-  const price = data?.price ?? '€425 000'
+  const price = data?.price ?? '€450 000'
   const mainImage = data?.mainImage ?? '/pictures/house/Loft-2.jfif'
   const floatingLabel = data?.floatingLabel ?? 'Le Loft'
   const floatingSize = data?.floatingSize ?? '147 m²'

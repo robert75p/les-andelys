@@ -21,7 +21,7 @@ export const translations = {
     hero: {
       region: 'NORMANDIE · FRANCE',
       title: 'Le Loft des Andelys',
-      subtitle: '147 m² · 2/3 chambres · Plafonds voûtés · €425 000',
+      subtitle: '147 m² · 2/3 chambres · Plafonds voûtés · €450 000',
       scroll: 'Découvrir',
     },
     overview: {
@@ -211,7 +211,7 @@ export const translations = {
     hero: {
       region: 'NORMANDY · FRANCE',
       title: 'Le Loft des Andelys',
-      subtitle: '147 m² · 2/3 bedrooms · Vaulted ceilings · €425,000',
+      subtitle: '147 m² · 2/3 bedrooms · Vaulted ceilings · €450,000',
       scroll: 'Discover',
     },
     overview: {
@@ -401,7 +401,7 @@ export const translations = {
     hero: {
       region: 'NORMANDIE · FRANKREICH',
       title: 'Le Loft des Andelys',
-      subtitle: '147 m² · 2/3 Schlafzimmer · Gewölbedecken · €425.000',
+      subtitle: '147 m² · 2/3 Schlafzimmer · Gewölbedecken · €450.000',
       scroll: 'Entdecken',
     },
     overview: {
@@ -591,7 +591,7 @@ export const translations = {
     hero: {
       region: 'NORMANDIA · FRANCIA',
       title: 'Le Loft des Andelys',
-      subtitle: '147 m² · 2/3 camere · Soffitti a volta · €425.000',
+      subtitle: '147 m² · 2/3 camere · Soffitti a volta · €450.000',
       scroll: 'Scopri',
     },
     overview: {
@@ -781,7 +781,7 @@ export const translations = {
     hero: {
       region: '诺曼底 · 法国',
       title: 'Le Loft des Andelys',
-      subtitle: '147 平方米 · 2/3 间卧室 · 拱形天花板 · €425,000',
+      subtitle: '147 平方米 · 2/3 间卧室 · 拱形天花板 · €450,000',
       scroll: '探索',
     },
     overview: {

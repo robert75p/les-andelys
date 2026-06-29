@@ -14,10 +14,10 @@ import type { PropertyContactData } from '@/lib/propertyTypes'
 export const metadata: Metadata = {
   title: 'Loft à Vendre Les Andelys (27700) — 147 m², Normandie',
   description:
-    'Loft atypique 147 m² à vendre à Les Andelys (27700), Normandie. Poutres chêne apparentes, plafonds voûtés 6 m, 2/3 chambres, parking sécurisé. À 2 min du Château Gaillard et de la Seine. €425 000.',
+    'Loft atypique 147 m² à vendre à Les Andelys (27700), Normandie. Poutres chêne apparentes, plafonds voûtés 6 m, 2/3 chambres, parking sécurisé. À 2 min du Château Gaillard et de la Seine. €450 000.',
   openGraph: {
     title: "Le Loft des Andelys — Loft d'Exception, Normandie",
-    description: 'Loft 147 m² à vendre · Château Gaillard · bords de Seine · Les Andelys 27700 · €425 000',
+    description: 'Loft 147 m² à vendre · Château Gaillard · bords de Seine · Les Andelys 27700 · €450 000',
     images: ['/pictures/house/Loft-1.png'],
     type: 'website',
     url: 'https://adresse-privee.fr/les-andelys/',
@@ -29,7 +29,7 @@ const jsonLd = {
   '@type': 'RealEstateListing',
   name: "Le Loft des Andelys — Loft d'Exception à Vendre, Les Andelys (27700)",
   description:
-    "Loft atypique de 147 m² à vendre à Les Andelys, Normandie (27700). Poutres en chêne apparentes, plafonds voûtés à 6 m, 2/3 chambres, parking sécurisé et cour privée. À deux minutes du Château Gaillard de Richard Cœur de Lion et des rives de la Seine. €425 000.",
+    "Loft atypique de 147 m² à vendre à Les Andelys, Normandie (27700). Poutres en chêne apparentes, plafonds voûtés à 6 m, 2/3 chambres, parking sécurisé et cour privée. À deux minutes du Château Gaillard de Richard Cœur de Lion et des rives de la Seine. €450 000.",
   url: 'https://adresse-privee.fr/les-andelys/',
   floorSize: { '@type': 'QuantitativeValue', value: 147, unitCode: 'MTK' },
   numberOfRooms: 3,
@@ -45,7 +45,7 @@ const jsonLd = {
   image: ['https://adresse-privee.fr/pictures/house/loft-1.jfif'],
   offers: {
     '@type': 'Offer',
-    price: '425000',
+    price: '450000',
     priceCurrency: 'EUR',
     availability: 'https://schema.org/InStock',
     seller: {
